@@ -1,0 +1,351 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+
+\usepackage{amsmath, amsfonts, amsthm}
+\usepackage{censor}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubheadingTwo}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\rom}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\StopCensoring
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\LARGE \scshape \censor{Felix Zhang}} \\ \vspace{1pt}
+    \footnotesize\faIcon{linkedin} \small\censor{\href{https://www.linkedin.com/in/felixfzhang/}{\underline{felixfzhang}}} $|$ 
+    \footnotesize\faIcon{github} \small\censor{\href{https://github.com/ff-zhang}{\underline{ff-zhang}}} $|$ 
+    \footnotesize\faIcon{envelope} \censor{\href{mailto:felixf.zhang@utoronto.ca}{\underline{felixf.zhang@utoronto.ca}}}
+    % \footnotesize\faIcon{phone} \censor{(778) 678-7918}
+    % \footnotesize\faIcon{globe} \censor{\href{https://ff-zhang.github.io/}{\underline{ff-zhang.github.io}}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Toronto}{Sept. 2021 -- May 2025}
+      {Honours Bachelor of Science; Specialist in Computer Science, Major in Mathematics}{\censor{3.96}/4.0 cGPA}
+      \resumeItemListStart
+      \resumeItem{\textbf{Coursework:}
+      % Software Design; 
+      % Software Tools and Systems;
+      Operating Systems;
+      % Intro.\ to AI; % Artificial Intelligence; 
+      % Intro.\ to Machine Learning;
+      Neural Networks and Deep Learning;
+      Probabilistic Learning and Reasoning;
+      Intro.\ to Image Understanding;
+      % Enriched Data Structures and Analysis; 
+      Algorithm Design, Analysis and Complexity; 
+      Advanced Algorithm Design;
+      % Computer Organization; 
+      % Computational Complexity and Computability;
+      Computability and Logic;
+      % Analysis \rom{2};
+      Complex Analysis \rom{1};
+      Real Analysis \rom{1};
+      % Groups, Rings, and Fields;
+      Mathematical Probability
+      % Algebra \rom{2};
+      % Probability and Statistics \rom{1}
+      \unskip}
+      \resumeItem{\textbf{Awards:}
+      University of Toronto Scholar (\$\censor{7 500}),
+      Malcolm Wallace Scholarship (\$\censor{4 500}),
+      Louis Savlov Scholarships in Sciences And Humanities (\$\censor{500}),
+      Dean's List Scholar,
+      BC Achievement Scholarship (\$\censor{1 250})
+      % District/Authority Scholarship (\$\censor{1 250}),
+      }
+      \resumeItemListEnd
+  %   \resumeSubheading
+  %     {St. Michaels University School}{Sept. 2019 -- June 2021}
+  %     {Dogwood Diploma (British Columbia High School Diploma); 98\% GPA}{Victoria, BC}
+  %     \resumeItemListStart
+  %     \resumeItem{\textbf{Courses:} AP Physics C, AP Computer Science A, AP Research}
+  %     \resumeItem{\textbf{Awards:} Alumni Association's Award for Science, Honour Roll}
+  %     \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+      \item\begin{tabular}{l@{\hspace{0.8em}}l}
+      \small\textbf{Languages} & \small{C, C++, Python, Java, Bash} \\
+      \small\textbf{Frameworks} & \small{PyTorch, TensorFlow, scikit-learn, NumPy, Pandas, SciPy, Matplotlib, MuJoCo, Eigen3} \\ % Vue.js, Django, Bootstrap4, Redis, MySQL, spaCy
+      \small\textbf{Tools} & \small{Git, Google Colab, gdb, Linux, shell, Jupyter, Anaconda, WSL, Slurm, CMake}
+    \end{tabular}
+  \end{itemize}
+
+%-----------EXPERIENCE-----------
+  \section{Experience}
+    \resumeSubHeadingListStart
+    \resumeSubheading
+    {\small{Machine Learning Researcher} \href{https://github.com/ff-zhang/mocap-mujoco}{\footnotesize\faIcon{external-link-alt}}}{\small{July 2023 -- Present}}
+    {\href{https://bmolab.artsci.utoronto.ca/}{BMO Lab}, University of Toronto}{}
+      \resumeItemListStart
+      \resumeItem{Worked under Prof.\ David Rokeby to integrate motion-capture suits and diffusion models into live performances}
+      \resumeItem{Applied forward dynamics in real-time on motion-capture data using \textbf{MuJoCo}, providing joint-level control of the model and the option to extract physical data using inverse dynamics}
+      \resumeItem{Explored the use of reinforcement learning to imitate input movements from motion capture suits in real-time}
+      \resumeItemListEnd
+
+      \resumeSubheading
+      {\small{Research Assistant} \href{https://github.com/ff-zhang/t-cell-response-encoder/tree/master}{\footnotesize\faIcon{external-link-alt}}}{\small{May 2023 -- Present}}
+      {\href{https://www.physics.utoronto.ca/~zilmana/}{Biological Physics Group}, University of Toronto}{}%{Python, PyTorch}
+        \resumeItemListStart
+        \resumeItem{Worked under Prof.\ Anton Zilman to model receptor signalling via soluble ligands with a high degree of cross-talk}
+        \resumeItem{Built a feed-forward network in \textbf{PyTorch} that predicts the cytokine dynamics of T-cells in response to antigens}
+        \resumeItem{Showed two variables are sufficient to determine cytokine concentrations (as predicted by previous theoretical work) because the model predicted the correct outputs with \emph{0.01\%} error using two hidden variables}
+        \resumeItemListEnd
+        
+    % \item
+    % \small\textbf{Identifying Suggestions in Student Evaluations using Deep Learning Models} \\
+    % \hfill \textit{Python, TensorFlow, scikit-learn, Numpy}
+      \resumeSubheading
+      % {\small{Extracting Suggestions From Student Evaluations} \href{https://github.com/ff-zhang/extracting-suggestions}{\footnotesize\faIcon{external-link-alt}}}{\small{May 2022 -- Sept.\ 2022}}
+      {\small{Research Student \href{https://github.com/ff-zhang/extracting-suggestions}{\footnotesize\faIcon{external-link-alt}}}}{\small{May 2022 -- Sept.\ 2022}}
+      {Physics Education Group, University of Toronto}{}%{Python, TensorFlow, scikit-learn}
+      \resumeItemListStart
+        \resumeItem{Worked with Prof.\ Carolyn Sealfon to develop suggestion extraction models for feedback from physics courses}
+        \resumeItem{Produced a dataset of \emph{{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}11 000} sentences from student feedback which labels whether they contain suggestions}
+        \resumeItem{Compared the effectiveness of statistical and deep-learning classifiers at extracting suggestions using \textbf{scikit-learn} and  \textbf{TensorFlow} respectively}
+        % \resumeItem{Trained the models using \textbf{TensorFlow} and \textbf{scikit-learn} with a Bayesian hyperparameter optimizer}
+        \resumeItem{Demonstrated the efficacy of a BERT classifier at addressing this problem with it achieving an F${}_1$ score of \emph{0.823}}
+      \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+    {\textbf{Student Response Classifier}}{\small{Mar.\ 2023 -- Apr.\ 2023}}
+    \resumeItemListStart
+      \resumeItem{Developed a 3-parameter logistic item response theory classifier in \textbf{PyTorch}, using alternating gradient descent for training, to predict the correctness of student answers to multiple-choice questions}
+      \resumeItem{Obtained an accuracy of \emph{72\%} on the \textit{NeurIPS 2020 Education Challenge} dataset (within $5\%$ of the best solution)}
+    \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{MNIST Classifier} \href{https://github.com/ff-zhang/mnist-classifier}{\footnotesize\faIcon{external-link-alt}}}{\small{Dec.\ 2022 -- Jan.\ 2023}}%{\textit{C++, Eigen3}}
+      \resumeItemListStart
+        \resumeItem{Implemented the softmax classifier from \emph{Understanding Machine Learning -- from Theory to Algorithms} with stochastic gradient descent using \textbf{C++} and the linear algebra library \textbf{Eigen3}}
+        \resumeItem{Achieved \emph{92\%} accuracy on the MNIST dataset of handwritten digits (within $2\%$ of the top classifier using SGD)}
+        \resumeItem{Included the ability to save trained weights, perform batch training, and track the training error in real-time}
+      \resumeItemListEnd
+
+      % \resumeProjectHeading
+      % {\textbf{Image Restoration with Convolutional Neural Networks} \href{https://github.com/ff-zhang/research-code/blob/master/paper.pdf}{\footnotesize\faIcon{external-link-alt}}}{\textit{Python, PyTorch}}
+      % \resumeSubheading
+      % {\small{Image Restoration with Convolutional Neural Networks \href{https://github.com/ff-zhang/research-code/blob/master/paper.pdf}{\footnotesize\faIcon{external-link-alt}}}}{\small{Sept.\ 2020 -- June 2021}}
+      % {AP Research, St.\ Michaels University School}{}%{Python, PyTorch}
+      %   \resumeItemListStart
+      %   % \resumeItem{Investigated the ability of convolutional neural networks to deblur and denoise images by combining RIDNet and DeepDeblur into one model using \textbf{PyTorch}}
+      %   \resumeItem{Combined RIDNet and DeepDeblur into one model using \textbf{PyTorch} to determine the ability of convolutional neural networks to deblur and denoise images }
+      %   \resumeItem{Artificially generated a dataset of {\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}5 000 noisy, blurred images using a Poisson-Gaussian noise model}
+      %     % \resumeItem{Combined RIDNet (Anwar and Barnes) and DeepDeblur (Nah \textit{et al.}) into one model using \textbf{PyTorch}}
+      %     \resumeItem{Discovered that integrating the two models offers marginal improvements over their individual performance}
+      %   \resumeItemListEnd
+
+    % \resumeProjectHeading
+    %   {\textbf{Natural Connection}}{} % \href{https://mtg-stream.herokuapp.com/}{\footnotesize\faIcon{external-link-alt}}}{}%{\textit{Python, Django, Bootstrap4, Redis}}
+    %   \resumeItemListStart
+    %     \resumeItem{Built a website using \textbf{Django}, \textbf{Redis}, and \textbf{Bootstrap4} to enable individuals to play \textit{Magic:\ the Gathering}}
+    %     \resumeItem{Implemented the \textbf{WebRTC} standard to allow up to four people in a single video call}
+    %     \resumeItem{Allowed 100+ people to play \textit{Magic:\ the Gathering} through their web browser during the COVID-19 pandemic}
+    %   \resumeItemListEnd
+
+    % \resumeProjectHeading
+    %   {\textbf{SMUS Business Leadership Website} \href{https://smus-business-clubs.herokuapp.com/}{\footnotesize\faIcon{external-link-alt}}}{\textit{Python, Django, Bootstrap4}}
+    %   \resumeItemListStart
+    %     \resumeItem{Established an online presence for the business leadership program at St. Michaels University School}
+    %     \resumeItem{Introduced an automated system which welcomes new members and alerts the club heads of their enrollment}
+    %     \resumeItem{Developed a blog which restricted posting to club members which queries a database of registered emails}
+    %   \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Volunteer Activities}
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+  \resumeSubHeadingListStart
+    \resumeSubheading
+    {Director of Internal Relations}{Apr.\ 2023 -- Present}{Computer Science Student Union, University of Toronto}{}
+    \resumeItemListStart
+      \resumeItem{Organized orientation for the {\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}500 undergraduate students entering the computer science (CMP1) stream}
+      \resumeItem{Facilitated 10+ events in collaboration with various partners in industry (such as AMD and Google) and students organizations (such as UTMIST \href{https://utmist.gitlab.io/}{\footnotesize\faIcon{external-link-alt}} and WiCS \href{https://www.linkedin.com/company/uoftwics/}{\footnotesize\faIcon{external-link-alt}}) so far}
+    \resumeItemListEnd
+
+    % \resumeSubheading
+    % {First-Year Academic Officer}{Sept.\ 2021 -- Apr.\ 2022}{Math Union, University of Toronto}{}
+    % \resumeItemListStart
+    %   \resumeItem{Facilitated discussions between 20 mentor-mentee pairs in the \textit{First-Year Mentorship Program} by providing guidance to the upper-year mentors}
+    %   % \resumeItem{Facillitated discussions between the 20  first-year and upper-year students in the \textit{First-Year Mentorship Program} and provided guidance to the mentors}
+    %   \resumeItem{Organized \textit{Coffee and Chat} events which allowed for informal discussions between students and math professors}
+    % \resumeItemListEnd
+
+    % \resumeSubheading
+    % {Registered Study Group Leader}{Sept. 2021 -- April 2022}{Sidney Smith Commons}{Toronto, ON}
+    % \resumeItemListStart
+    %   \resumeItem{Led a study group for \textit{Foundations of Computer Science \rom{1}} and \textit{Enriched Intro.\ to the Theory of Computation}}
+    %   % \resumeItem{Headed weekly meetings for first-years students that reviewed content covered in the previous week's lecture}
+    %   \resumeItem{Developed example problems to clarify and reinforce important concepts through group discussion}
+    % \resumeItemListEnd
+
+    % \resumeSubheading
+    %   {Barista\textbackslash Cashier}{June 2020 -- Sept. 2021}
+    %   {Big Orange Bubble Tea}{Victoria, BC}
+    %   \resumeItemListStart
+    %     \resumeItem{Took orders and prepared drinks (approx. 30 per hour)}
+    %     \resumeItem{Maintained the cleanliness of the work area while under high pressure}
+    %   \resumeItemListEnd
+
+    % \resumeSubheading
+    %   {Video Producer}{Nov. 2019 -- Aug. 2020}
+    %   {Westcoast Academy of Performing Arts}{Victoria, BC}
+    %   \resumeItemListStart
+    %     \resumeItem{Produced the first DVD of the studio's annual Winter shows}
+    %     % \resumeItem{Organzied the recording of the performance and edited the resulting video}
+    %     \resumeItem{Enabled 30+ families in lockdown to watch their children's Year End performance live}
+    %   \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+
+%-----------EXTRACURRICULARS-----------
+% \section{Extracurriculars}
+%   \begin{itemize}[leftmargin=0.15in, label={}]
+%     \small{\item{
+%       \textbf{Westcoast Academy of Performing Arts:}{ Graduated from the pre-professional dance program; Invited to the Royal Winnipeg Ballet's Professional Division's summer program in 2019} \\
+%       % \textbf{Django Contributor:}{ Increased the regex options available for url parsing and redirection} \\
+%       \textbf{SMUS Math Club:}{ Led the club to place top 10 in the province on the Galois and Fryer math competitions; Held a series of lectures introducing various domains within mathematics to club members}
+%     }}
+%   \end{itemize}
+
+
+%-------------------------------------------
+
+\end{document}

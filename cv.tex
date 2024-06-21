@@ -1,0 +1,372 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+
+\usepackage{amsmath, amsfonts, amsthm}
+\usepackage{censor}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubheadingTwo}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\rom}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\StopCensoring
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\LARGE \scshape \censor{Felix Zhang}} \\ \vspace{1pt}
+    \footnotesize\faIcon{linkedin} \small\censor{\href{https://www.linkedin.com/in/felixfzhang/}{\underline{felixfzhang}}} $|$ 
+    \footnotesize\faIcon{github} \small\censor{\href{https://github.com/ff-zhang}{\underline{ff-zhang}}} $|$ 
+    \footnotesize\faIcon{envelope} \censor{\href{mailto:felixf.zhang@utoronto.ca}{\underline{felixf.zhang@utoronto.ca}}}
+    % \footnotesize\faIcon{phone} \censor{(778) 678-7918}
+    % \footnotesize\faIcon{globe} \censor{\href{https://ff-zhang.github.io/}{\underline{ff-zhang.github.io}}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Honours Bachelor of Science, University of Toronto}{Sept. 2021 -- May 2025}
+      {Specialist in Computer Science, Major in Mathematics}{\censor{3.96}/4.0 cGPA}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+  \section{Experience}
+    \resumeSubHeadingListStart
+    \resumeSubheading
+    {\small{Machine Learning Researcher} \href{https://github.com/ff-zhang/mocap-mujoco}{\footnotesize\faIcon{external-link-alt}}}{\small{Mar 2024 -- Present}}
+    {KidneyOS, University of Toronto}{}
+      \resumeItemListStart
+      \resumeItem{Worked under Prof.\ Jack Sun to implement a memory-safe kernel \textit{KidneyOS} in \textbf{Rust} for an introductory operating systems course}
+      \resumeItem{Investigated binding the host file system to enable direct program exectution within the \textbf{QEMU} emulator}
+      % \resumeItem{Contributed to the }
+      \resumeItemListEnd
+
+    \resumeSubheading
+    {\small{Machine Learning Researcher} \href{https://github.com/ff-zhang/mocap-mujoco}{\footnotesize\faIcon{external-link-alt}}}{\small{July 2023 -- Present}}
+    {\href{https://bmolab.artsci.utoronto.ca/}{BMO Lab}, University of Toronto}{}
+      \resumeItemListStart
+      \resumeItem{Worked under Prof.\ David Rokeby to integrate motion-capture suits and diffusion models into live performances}
+      \resumeItem{Applied forward dynamics in real-time on motion-capture data using \textbf{MuJoCo}, providing joint-level control of the model and the option to extract physical data using inverse dynamics}
+      \resumeItem{Used spherical linear interpolation to smooth highly-stochastic positional data and estimate the velocity and acceleration of joints over time}
+      \resumeItem{Trained agents imitate real-world actions using the actor-crtic algorithm and proximal policy optimization}
+      \resumeItemListEnd
+
+      \resumeSubheading
+      {\small{Research Assistant} \href{https://github.com/ff-zhang/t-cell-response-encoder/tree/master}{\footnotesize\faIcon{external-link-alt}}}{\small{May 2023 -- Present}}
+      {\href{https://www.physics.utoronto.ca/~zilmana/}{Biological Physics Group}, University of Toronto}{}%{Python, PyTorch}
+        \resumeItemListStart
+        \resumeItem{Worked under Prof.\ Anton Zilman to model receptor signalling via soluble ligands with a high degree of cross-talk}
+        \resumeItem{Implemented a data pre-processing pipeline that transforms highly-stochastic time series into a representative smooth spline and its integral}
+        \resumeItem{Built a feed-forward network in \textbf{PyTorch} that predicts the cytokine dynamics of T-cells in response to antigens}
+        \resumeItem{Showed two variables are sufficient to determine cytokine concentrations (as predicted by theoretical work) because the model predicted the correct outputs with an $\ell_2$ error of \emph{0.1\%} using two hidden variables in the final layer}
+        \resumeItemListEnd
+        
+    % \item
+    % \small\textbf{Identifying Suggestions in Student Evaluations using Deep Learning Models} \\
+    % \hfill \textit{Python, TensorFlow, scikit-learn, Numpy}
+      \resumeSubheading
+      % {\small{Extracting Suggestions From Student Evaluations} \href{https://github.com/ff-zhang/extracting-suggestions}{\footnotesize\faIcon{external-link-alt}}}{\small{May 2022 -- Sept.\ 2022}}
+      {\small{Research Assistant \href{https://github.com/ff-zhang/extracting-suggestions}{\footnotesize\faIcon{external-link-alt}}}}{\small{May 2022 -- Sept.\ 2022}}
+      {Physics Education Group, University of Toronto}{}%{Python, TensorFlow, scikit-learn}
+      \resumeItemListStart
+        \resumeItem{Worked with Prof.\ Carolyn Sealfon to develop suggestion extraction models for feedback from physics courses}
+        \resumeItem{Produced a dataset of \emph{{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}11 000} sentences from student feedback which labels whether they contain suggestions}
+        \resumeItem{Compared the effectiveness of statistical and deep-learning classifiers at extracting suggestions using \textbf{scikit-learn} and  \textbf{TensorFlow} respectively}
+        \resumeItem{Trained the models using \textbf{TensorFlow} and \textbf{scikit-learn} with a Bayesian hyperparameter optimizer}
+        \resumeItem{Demonstrated the efficacy of a BERT classifier at addressing this problem with it achieving an F${}_1$ score of \emph{0.823}}
+      \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+    {\textbf{MNIST-to-EMNIST Domain Adaption} \href{https://github.com/ff-zhang/domain-adaption-optimal-transport}{\footnotesize\faIcon{external-link-alt}}}{\small{Sept.\ 2023 -- Dec.\ 2023}}
+    \resumeItemListStart
+      \resumeItem{Worked with \href{https://www.math.toronto.edu/joaqsan/JoaquinPersonal.html}{Joaquin Sanchez-Garcia} on applying the theory of optimal transport to domain adaption within the context of image classification.}
+      \resumeItem{Used \textbf{Python Optimal Transport} to compute various functions which transform the EMNIST dataset of handwritten digits such that its distribution and priors match those of the MNIST dataset.}
+      \resumeItem{Found that the accuracy of a fully-connected feed-forward classifier trained on the MNIST dataset was improved from \emph{17\%} to \emph{73\%} on the EMNIST dataset, demonstrating its usefulness.}
+    \resumeItemListEnd
+
+    % \resumeProjectHeading
+    % {\textbf{Student Response Classifier}}{\small{Mar.\ 2023 -- Apr.\ 2023}}
+    % \resumeItemListStart
+    %   \resumeItem{Developed a 3-parameter logistic item response theory classifier in \textbf{PyTorch}, using alternating gradient descent for training, to predict the correctness of student answers to multiple-choice questions}
+    %   \resumeItem{Obtained an accuracy of \emph{72\%} on the \textit{NeurIPS 2020 Education Challenge} dataset (within $5\%$ of the best solution)}
+    % \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{MNIST Classifier} \href{https://github.com/ff-zhang/mnist-classifier}{\footnotesize\faIcon{external-link-alt}}}{\small{Dec.\ 2022 -- Jan.\ 2023}}%{\textit{C++, Eigen3}}
+      \resumeItemListStart
+        \resumeItem{Implemented the softmax classifier from ``Understanding Machine Learning -- from Theory to Algorithms'' with stochastic gradient descent using \textbf{C++} and the linear algebra library \textbf{Eigen3}}
+        \resumeItem{Achieved \emph{92\%} accuracy on the MNIST dataset of handwritten digits (within $2\%$ of the top classifier using SGD)}
+        \resumeItem{Included the ability to save trained weights, perform batch training, and track the training error in real-time}
+      \resumeItemListEnd
+
+      \resumeProjectHeading
+      {\textbf{Image Restoration with Convolutional Neural Networks} \href{https://github.com/ff-zhang/research-code/blob/master/paper.pdf}{\footnotesize\faIcon{external-link-alt}}}{\small{Sept.\ 2020 -- June 2021}}
+      % \resumeSubheading
+      % {\small{Image Restoration with Convolutional Neural Networks \href{https://github.com/ff-zhang/research-code/blob/master/paper.pdf}{\footnotesize\faIcon{external-link-alt}}}}{\small{Sept.\ 2020 -- June 2021}}
+      % {AP Research, St.\ Michaels University School}{}%{Python, PyTorch}
+        \resumeItemListStart
+        % \resumeItem{Investigated the ability of convolutional neural networks to deblur and denoise images by combining RIDNet and DeepDeblur into one model using \textbf{PyTorch}}
+        \resumeItem{Combined the models RIDNet and DeepDeblur using \textbf{PyTorch} to determine the ability of convolutional neural networks to deblur and denoise images}
+        \resumeItem{Artificially generated a dataset of \emph{{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}5 000} noisy, blurred images using a Poisson-Gaussian noise model}
+          % \resumeItem{Combined RIDNet (Anwar and Barnes) and DeepDeblur (Nah \textit{et al.}) into one model using \textbf{PyTorch}}
+          \resumeItem{Discovered that integrating the two models offers marginal improvements over their individual performance}
+        \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+  %-----------PROGRAMMING SKILLS-----------
+  \section{Technical Skills}
+    \begin{itemize}[leftmargin=0.15in, label={}]
+        \item\begin{tabular}{l@{\hspace{0.8em}}l}
+        \small\textbf{Languages} & \small{Python, C, C++, Rust, Java} \\
+        \small\textbf{Frameworks} & \small{PyTorch, TensorFlow, scikit-learn, NumPy, Pandas, SciPy, Matplotlib, MuJoCo, Eigen3} \\ % Vue.js, Django, Bootstrap4, Redis, MySQL, spaCy
+        \small\textbf{Tools} & \small{Git, shell, ssh, Unix, CMake, Anaconda, Google Colab, QEMU, Jupyter, WSL, Slurm}
+      \end{tabular}
+    \end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Student Leadership}
+
+  \resumeSubHeadingListStart
+    \resumeSubheading
+    {Director of Internal Relations}{Apr.\ 2023 -- Present}{Computer Science Student Union, University of Toronto}{}
+    \resumeItemListStart
+      \resumeItem{Organized orientation for the {\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}500 undergraduate students entering the computer science (CMP1) stream}
+      \resumeItem{Planned 10+ events in collaboration with various partners in industry (such as AMD and Google) and student organizations (such as UTMIST \href{https://utmist.gitlab.io/}{\footnotesize\faIcon{external-link-alt}} and WiCS \href{https://www.linkedin.com/company/uoftwics/}{\footnotesize\faIcon{external-link-alt}})}
+      \resumeItem{Hosted 3+ talks with professors in the Department of Computer Science at the University of Toronto}
+    \resumeItemListEnd
+
+    \resumeSubheading
+    {First-Year Academic Officer}{Sept.\ 2021 -- Apr.\ 2022}{Math Union, University of Toronto}{}
+    \resumeItemListStart
+      \resumeItem{Facilitated discussions between 20 mentor-mentee pairs in the \textit{First-Year Mentorship Program} by providing guidance to the upper-year mentors}
+      \resumeItem{Organized ``Coffee and Chat'' events which allowed for informal discussions between students and math professors}
+    \resumeItemListEnd
+
+    \resumeSubheading
+    {Registered Study Group Leader}{Sept. 2021 -- April 2022}{Sidney Smith Commons, University of Toronto}{}
+    \resumeItemListStart
+      \resumeItem{Led study groups for \textit{Foundations of Computer Science \rom{1}} and \textit{Enriched Introduction to the Theory of Computation}}
+      \resumeItem{Headed weekly meetings for first-years students that reviewed content covered in the previous week's lecture}
+      \resumeItem{Developed example problems to clarify and reinforce important concepts through group discussion}
+    \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+    %-----------AWARDS-----------
+    \section{Awards \& Scholarships}
+    
+      \resumeSubHeadingListStart
+        \resumeProjectHeading
+        {\textbf{Dean's List Scholar}, University of Toronto}{Sept.\ 2021 -- Present}
+        \resumeProjectHeading
+        {\textbf{Second Malcom Wallace Scholarship} (\$4 500), University of Toronto}{Sept.\ 2021 -- Present}
+        \resumeProjectHeading
+        {\textbf{Louis Savlov Scholarships in Sciences And Humanities} (\$500), University of Toronto}{Nov.\ 2023}
+        \resumeProjectHeading
+        {\textbf{University of Toronto Scholar} (\$7 500), University of Toronto}{Sept.\ 2021}
+        \resumeProjectHeading
+        {\textbf{BC Achievement Scholarship} (\$1 250), Government of British Columbia}{Aug.\ 2021}
+        \resumeProjectHeading
+        {\textbf{District/Authority Scholarship} (\$1 250), Government of British Columbia}{Aug.\ 2021}
+      \resumeSubHeadingListEnd
+      \vspace{-0.8em}
+
+    %-----------COURSEWORK-----------
+
+    \section{Selected Coursework}
+    \vspace{-0.3em}
+    \begin{minipage}{\textwidth}
+      \centering
+      \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+      \renewcommand*{\thempfootnote}{\fnsymbol{mpfootnote}}
+      \renewcommand{\arraystretch}{1.2}
+      % \begin{tabular}{ m{4.0em} m{21.0em} m{9.9em} r m{3.0em} }
+      %   \hline
+      %   \vspace{0.2em}
+      %   \textbf{Code} & \textbf{Title} & \textbf{Instructor} & \textbf{Term} \\
+      %   \hline\hline
+      %   \vspace{0.2em}
+      %   CSC412 & Probabilistic Learning and Reasoning & Murat Anil Erdogdu & Winter 2024 \\
+      %   CSC413 & Neural Networks and Deep Learning & Amir-massoud Farahmand & Winter 2024 \\
+      %   CSC473 & Advanced Algorithm Design & Aleksandar Nikolov & Winter 2024 \\
+      %   MAT357 & Real Analysis \rom{1} & Alexander Nabutovsky & Winter 2024 \\
+
+      %   MAT347 & Groups, Rings, and Fields & Joe Repka & Fall 2023/Winter 2024 \\
+
+      %   CSC369 & Operating Systems & Angela Demke Brown & Fall 2023 \\
+      %   CSC420 & Introduction to Image Understanding & Babak Taati & Fall 2023 \\
+      %   MAT354 & Complex Analysis \rom{1} & Edward Bierstone & Fall 2023 \\
+      %   MAT377 & Mathematical Probability & Duncan Dauvergne & Fall 2023 \\
+      %   APM462 & Nonlinear Optimization & Jonathan Korman & Fall 2023 \\
+
+      %   CSC311 & Introduction to Machine Learning & Michael Zhang & Winter 2023 \\
+      %   CSC373 & Algorithm Design, Analysis and Complexity & Nathan Wiebe & Winter 2023 \\
+      %   CSC384 & Introduction to Artificial Intelligence & Alice Gao & Winter 2023 \\
+      %   CSC438 & Computability and Logic & Swastik Kopparty & Winter 2023 \\
+
+      %   MAT257 & Analysis \rom{2} & Spyros Alexakis & Fall 2022/Winter 2023 \\
+
+      %   CSC258 & Computer Organization & Mario Badr & Fall 2022 \\
+      %   CSC265 & Enriched Data Structures and Analysis & Faith Ellen & Fall 2022 \\
+      %   CSC463 & Computational Complexity and Computability & Shubhangi Saraf & Fall 2022 \\
+      %   \hline
+      % \end{tabular}
+      \begin{tabularx}{0.98\textwidth}{ p{6.0em} X r }
+        \textbf{Code} & \textbf{Title} & \textbf{Term} \\
+        \noalign{\vspace{0.1em}}
+        \hline\hline
+        \noalign{\vspace{0.2em}}
+        CSC324 & Principles of Programming Languages & Winter 2024 \\
+        CSC412\footnotemark[2] & Probabilistic Learning and Reasoning & Winter 2024 \\
+        CSC413\footnotemark[2] & Neural Networks and Deep Learning & Winter 2024 \\
+        CSC473 & Advanced Algorithm Design & Winter 2024 \\
+        MAT357 & Real Analysis \rom{1} & Winter 2024 \\
+
+        % MAT347 & Groups, Rings, and Fields & Fall 2023/Winter 2024 \\
+
+        APM462 & Nonlinear Optimization & Fall 2023 \\
+        CSC369 & Operating Systems & Fall 2023 \\
+        CSC420 & Introduction to Image Understanding & Fall 2023 \\
+        MAT354 & Complex Analysis \rom{1} & Fall 2023 \\
+        MAT377 & Mathematical Probability & Fall 2023 \\
+
+        % MAT327 & Introduction to Topology & Summer 2023 \\
+
+        % CSC311 & Introduction to Machine Learning & Winter 2023 \\
+        CSC373 & Algorithm Design, Analysis and Complexity & Winter 2023 \\
+        CSC384 & Introduction to Artificial Intelligence & Winter 2023 \\
+        % CSC438 & Computability and Logic & Winter 2023 \\
+
+        % MAT257 & Analysis \rom{2} & Fall 2022/Winter 2023 \\
+
+        % CSC258 & Computer Organization & Fall 2022 \\
+        % CSC265 & Enriched Data Structures and Analysis & Fall 2022 \\
+        CSC463 & Computational Complexity and Computability & Fall 2022 \\
+
+        % MAT344 & Introduction to Combinatorics & Summer 2022
+      \end{tabularx}
+      \footnotetext[2]{Cross-listed graduate courses}
+    \end{minipage}
+
+%-------------------------------------------
+
+\end{document}
