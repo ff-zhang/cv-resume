@@ -119,10 +119,6 @@
 \StopCensoring
 
 %----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
 
 \begin{center}
     \textbf{\LARGE \scshape \censor{Felix Zhang}} \\ \vspace{1pt}
@@ -181,15 +177,42 @@
       \item\begin{tabular}{l@{\hspace{0.8em}}l}
       \small\textbf{Languages} & \small{C, C++, Python, Rust, Bash, Java} \\
       \small\textbf{Frameworks} & \small{PyTorch, TensorFlow, scikit-learn, NumPy, Pandas, SciPy, Matplotlib, MuJoCo, Eigen3} \\ % Vue.js, Django, Bootstrap4, Redis, MySQL, spaCy
-      \small\textbf{Tools} & \small{Git, Google Colab, gdb, Linux, shell, Jupyter, Anaconda, WSL, Slurm, CMake}
+      \small\textbf{Tools} & \small{Git, gdb, Linux, shell, CMake, Qemu, Google Colab, Jupyter, Anaconda, Docker, WSL, Slurm}
     \end{tabular}
   \end{itemize}
 
 %-----------EXPERIENCE-----------
   \section{Experience}
     \resumeSubHeadingListStart
+    
     \resumeSubheading
-    {\small{Machine Learning Researcher} \href{https://github.com/ff-zhang/mocap-mujoco}{\footnotesize\faIcon{external-link-alt}}}{\small{July 2023 -- Present}}
+    {\small{Researcher}}{\small{June 2024 -- Present}}
+    {\href{https://hollandbloorview.ca/research-education/bloorview-research-institute/research-centres-labs/prism-lab}{PRISM Lab}, Holland-Bloorview Kids Rehabilitation Hospital \& \href{http://www.fields.utoronto.ca/activities/24-25/2024-FUSRP}{FUSRP}, the Fields Institute}{}
+      \resumeItemListStart
+      \resumeItem{Worked under Prof.\ Tom Chau on denoising electroencephalogram (EEG) data with deep-learning models}
+      \resumeItem{Performed a literature review on previous methods used for EEG denoising and tested previously proposed machine-learning models on the \emph{EEGDenoiseNet} dataset}
+      \resumeItem{Investigated the applicability of end-to-end transformer models to denoise EEG signals as well as the impact of using signals' time-frequency representation as input}
+      \resumeItemListEnd
+      
+      \resumeSubheading
+      {\small{ML Runtime Engineer}}{\small{May 2024 -- Present}}
+      {\href{https://www.cerebras.net/}{Cerebras Systems}}{}
+        \resumeItemListStart
+        \resumeItem{Implemented a runtime virtual memory system in \textbf{C++} which pre-emptively loads data immediately before it is needed by tracking upcoming memory accesses}
+        \resumeItem{Triaged and addressed \textbf{20+} failing tests within a high-priority test suite that is run nightly}
+        \resumeItemListEnd
+      
+      \resumeSubheading
+      {\small{Research Student} \href{https://github.com/KidneyOS/KidneyOS}{\footnotesize\faIcon{external-link-alt}}}{\small{May 2024 -- Present}}
+      {University of Toronto}{}
+        \resumeItemListStart
+        \resumeItem{Worked under Prof.\ Jack Sun to implement pedagogical operating system \textit{KidneyOS} in \textbf{Rust} for an introductory operating systems course}
+        \resumeItem{Designed and built the process system and implemented kernel/user thread differentiation in context swtiches}
+        \resumeItem{Implemented [ TODO: list ] system calls}
+        \resumeItemListEnd
+
+    \resumeSubheading
+    {\small{Machine Learning Researcher} \href{https://github.com/ff-zhang/mocap-mujoco}{\footnotesize\faIcon{external-link-alt}}}{\small{July 2023 -- May 2024}}
     {\href{https://bmolab.artsci.utoronto.ca/}{BMO Lab}, University of Toronto}{}
       \resumeItemListStart
       \resumeItem{Worked under Prof.\ David Rokeby to integrate motion-capture suits and diffusion models into live performances}
@@ -198,12 +221,12 @@
       \resumeItemListEnd
 
       \resumeSubheading
-      {\small{Research Assistant} \href{https://github.com/ff-zhang/t-cell-response-encoder/tree/master}{\footnotesize\faIcon{external-link-alt}}}{\small{May 2023 -- Present}}
+      {\small{Research Assistant} \href{https://github.com/ff-zhang/t-cell-response-encoder/tree/master}{\footnotesize\faIcon{external-link-alt}}}{\small{May 2023 -- May 2024}}
       {\href{https://www.physics.utoronto.ca/~zilmana/}{Biological Physics Group}, University of Toronto}{}%{Python, PyTorch}
         \resumeItemListStart
         \resumeItem{Worked under Prof.\ Anton Zilman to model receptor signalling via soluble ligands with a high degree of cross-talk}
         \resumeItem{Built a feed-forward network in \textbf{PyTorch} that predicts the cytokine dynamics of T-cells in response to antigens}
-        \resumeItem{Showed two variables are sufficient to determine cytokine concentrations (as predicted by previous theoretical work) because the model predicted the correct outputs with \emph{0.01\%} error using two hidden variables}
+        \resumeItem{Showed two variables are sufficient to determine cytokine concentrations (as predicted by previous theoretical work) because the model predicted the correct outputs with \textbf{0.01\%} error using two hidden variables}
         \resumeItemListEnd
         
     % \item
@@ -215,54 +238,10 @@
       {Physics Education Group, University of Toronto}{}%{Python, TensorFlow, scikit-learn}
       \resumeItemListStart
         \resumeItem{Worked with Prof.\ Carolyn Sealfon to develop suggestion extraction models for feedback from physics courses}
-        \resumeItem{Produced a dataset of \emph{{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}11 000} sentences from student feedback which labels whether they contain suggestions}
+        \resumeItem{Created a dataset of \textbf{{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}11 000} sentences from student feedback which labels whether they contain suggestions}
         \resumeItem{Compared the effectiveness of statistical and deep-learning classifiers at extracting suggestions using \textbf{scikit-learn} and  \textbf{TensorFlow} respectively}
-        % \resumeItem{Trained the models using \textbf{TensorFlow} and \textbf{scikit-learn} with a Bayesian hyperparameter optimizer}
-        \resumeItem{Demonstrated the efficacy of a BERT classifier at addressing this problem with it achieving an F${}_1$ score of \emph{0.823}}
+        \resumeItem{Demonstrated the efficacy of a BERT classifier at addressing this problem with it achieving an F${}_1$ score of \textbf{0.823}}
       \resumeItemListEnd
-    \resumeSubHeadingListEnd
-
-%-----------PROJECTS-----------
-\section{Projects}
-  \resumeSubHeadingListStart
-
-    \resumeProjectHeading
-    {\textbf{Student Response Classifier}}{\small{Mar.\ 2023 -- Apr.\ 2023}}
-    \resumeItemListStart
-      \resumeItem{Developed a 3-parameter logistic item response theory classifier in \textbf{PyTorch}, using alternating gradient descent for training, to predict the correctness of student answers to multiple-choice questions}
-      \resumeItem{Obtained an accuracy of \emph{72\%} on the \textit{NeurIPS 2020 Education Challenge} dataset (within $5\%$ of the best solution)}
-    \resumeItemListEnd
-
-    \resumeProjectHeading
-      {\textbf{MNIST Classifier} \href{https://github.com/ff-zhang/mnist-classifier}{\footnotesize\faIcon{external-link-alt}}}{\small{Dec.\ 2022 -- Jan.\ 2023}}%{\textit{C++, Eigen3}}
-      \resumeItemListStart
-        \resumeItem{Implemented the softmax classifier from \emph{Understanding Machine Learning -- from Theory to Algorithms} with stochastic gradient descent using \textbf{C++} and the linear algebra library \textbf{Eigen3}}
-        \resumeItem{Achieved \emph{92\%} accuracy on the MNIST dataset of handwritten digits (within $2\%$ of the top classifier using SGD)}
-        \resumeItem{Included the ability to save trained weights, perform batch training, and track the training error in real-time}
-      \resumeItemListEnd
-
-    \resumeSubHeadingListEnd
-
-%-----------EXPERIENCE-----------
-\section{Volunteer Activities}
-% -----------Multiple Positions Heading-----------
-%    \resumeSubSubheading
-%     {Software Engineer I}{Oct 2014 - Sep 2016}
-%     \resumeItemListStart
-%        \resumeItem{Apache Beam}
-%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-%     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-%-------------------------------------------
-
-  \resumeSubHeadingListStart
-    \resumeSubheading
-    {Director of Internal Relations}{Apr.\ 2023 -- Present}{Computer Science Student Union, University of Toronto}{}
-    \resumeItemListStart
-      \resumeItem{Organized orientation for the {\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}500 undergraduate students entering the computer science (CMP1) stream}
-      \resumeItem{Facilitated 10+ events in collaboration with various partners in industry (such as AMD and Google) and students organizations (such as UTMIST \href{https://utmist.gitlab.io/}{\footnotesize\faIcon{external-link-alt}} and WiCS \href{https://www.linkedin.com/company/uoftwics/}{\footnotesize\faIcon{external-link-alt}}) so far}
-    \resumeItemListEnd
-
     \resumeSubHeadingListEnd
 
 \end{document}
