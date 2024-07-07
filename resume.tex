@@ -71,18 +71,26 @@
   }
 }
 
-\newcommand{\resumeSubheading}[4]{
+\newcommand{\resumeSubheading}[5]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
+      \small{\textbf{#1}; {#2}} & \small{#3} \\[-0.05em]
+      \emph{\small{#4}} & \textit{\small #5} \\
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeSubheadingTwo}[2]{
+\newcommand{\resumeSubheadingTwo}[3]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2
+      \small{\textbf{#1}; #2} & \small{#3}
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubheadingThree}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\small #1} & \small{#2} \\
+      \textit{\small#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -133,115 +141,114 @@
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
-    \resumeSubheading
+    \resumeSubheadingThree
       {University of Toronto}{Sept. 2021 -- May 2025}
-      {Honours Bachelor of Science; Specialist in Computer Science, Major in Mathematics}{\censor{3.95}/4.0 cGPA}
+      {Honours Bachelor of Science in Computer Science, Major in Mathematics}{\censor{3.95}/4.0 cGPA}
       \resumeItemListStart
       \resumeItem{\textbf{Coursework:}
-      % Software Design; 
-      % Software Tools and Systems;
-      Operating Systems;
-      % Intro.\ to AI; % Artificial Intelligence; 
-      % Intro.\ to Machine Learning;
-      Neural Networks and Deep Learning;
-      Probabilistic Learning and Reasoning;
-      Intro.\ to Image Understanding;
-      % Enriched Data Structures and Analysis; 
-      Algorithm Design, Analysis and Complexity; 
-      Advanced Algorithm Design;
-      % Computer Organization; 
-      Computational Complexity and Computability;
-      % Computability and Logic;
-      % Analysis \rom{2};
-      Complex Analysis \rom{1};
-      Real Analysis \rom{1};
-      % Groups, Rings, and Fields;
-      Mathematical Probability
-      % Algebra \rom{2};
-      % Probability and Statistics \rom{1}
-      \unskip}
+        % Software Design; 
+        % Software Tools and Systems;
+        Operating Systems;
+        % Intro.\ to AI; % Artificial Intelligence; 
+        % Intro.\ to Machine Learning;
+        Neural Networks and Deep Learning;
+        Probabilistic Learning and Reasoning;
+        Intro.\ to Image Understanding;
+        % Enriched Data Structures and Analysis; 
+        Algorithm Design, Analysis and Complexity; 
+        Advanced Algorithm Design;
+        % Computer Organization; 
+        Computational Complexity and Computability;
+        % Computability and Logic;
+        % Analysis \rom{2};
+        Complex Analysis \rom{1};
+        Real Analysis \rom{1};
+        % Groups, Rings, and Fields;
+        Mathematical Probability
+        % Algebra \rom{2};
+        % Probability and Statistics \rom{1}
+        \unskip
+      }
       \resumeItem{\textbf{Awards:}
-      University of Toronto Scholar (\$\censor{7 500}),
-      Malcolm Wallace Scholarship (\$\censor{4 500}),
-      Louis Savlov Scholarships in Sciences And Humanities (\$\censor{500}),
-      Dean's List Scholar
-      % BC Achievement Scholarship (\$\censor{1 250}),
-      % District/Authority Scholarship (\$\censor{1 250})
+        Fields Undergraduate Summer Research Program (FUSRP) (\$\censor{3 800}),
+        Louis Savlov Scholarships in Sciences And Humanities (\$\censor{500}),
+        Malcolm Wallace Scholarship (\$\censor{4 500}),
+        University of Toronto Scholar (\$\censor{7 500}),
+        Dean's List Scholar,
+        B.C.\ Achievement Scholarship (\$\censor{1 250}),
+        District/Authority Scholarship (\$\censor{1 250})
       }
       \resumeItemListEnd
   \resumeSubHeadingListEnd
-
-%-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
-  \begin{itemize}[leftmargin=0.15in, label={}]
-      \item\begin{tabular}{l@{\hspace{0.8em}}l}
-      \small\textbf{Languages} & \small{C, C++, Python, Rust, Bash, Java} \\
-      \small\textbf{Frameworks} & \small{PyTorch, TensorFlow, scikit-learn, NumPy, Pandas, SciPy, Matplotlib, MuJoCo, Eigen3} \\ % Vue.js, Django, Bootstrap4, Redis, MySQL, spaCy
-      \small\textbf{Tools} & \small{Git, gdb, Linux, shell, CMake, Qemu, Google Colab, Jupyter, Anaconda, Docker, WSL, Slurm}
-    \end{tabular}
-  \end{itemize}
 
 %-----------EXPERIENCE-----------
   \section{Experience}
     \resumeSubHeadingListStart
     
     \resumeSubheading
-    {\small{Researcher}}{\small{June 2024 -- Present}}
-    {\href{https://hollandbloorview.ca/research-education/bloorview-research-institute/research-centres-labs/prism-lab}{PRISM Lab}, Holland-Bloorview Kids Rehabilitation Hospital \& \href{http://www.fields.utoronto.ca/activities/24-25/2024-FUSRP}{FUSRP}, the Fields Institute}{}
+    {Research Assistant}{\href{https://hollandbloorview.ca/research-education/bloorview-research-institute/research-centres-labs/prism-lab}{PRISM Lab}, Bloorview Research Institute}{June 2024 -- Present}
+    {Supervisors: Erica Floreani and Prof.\ Tom Chau; Funded by: FUSRP}{}
       \resumeItemListStart
-      \resumeItem{Worked under Prof.\ Tom Chau on denoising electroencephalogram (EEG) data with deep-learning models}
-      \resumeItem{Performed a literature review on previous methods used for EEG denoising and tested previously proposed machine-learning models on the \emph{EEGDenoiseNet} dataset}
-      \resumeItem{Investigated the applicability of end-to-end transformer models to denoise EEG signals as well as the impact of using signals' time-frequency representation as input}
+      % \resumeItem{Worked under  on denoising electroencephalogram (EEG) data with deep-learning models}
+      \resumeItem{Curated deep-learning models from the literature on denoising electroencephalogram (EEG) data in a team of $4$ and benchmarked them on the \texttt{EEGDenoiseNet} dataset}
+      \resumeItem{Investigated the applicability of end-to-end transformer models to denoise EEG signals and the impact of using signals' time-frequency representation as input}
       \resumeItemListEnd
       
-      \resumeSubheading
-      {\small{ML Runtime Engineer}}{\small{May 2024 -- Present}}
-      {\href{https://www.cerebras.net/}{Cerebras Systems}}{}
-        \resumeItemListStart
-        \resumeItem{Implemented a runtime virtual memory system in \textbf{C++} which pre-emptively loads data immediately before it is needed by tracking upcoming memory accesses}
-        \resumeItem{Triaged and addressed \textbf{20+} failing tests within a high-priority test suite that is run nightly}
-        \resumeItemListEnd
+    \resumeSubheadingTwo
+    {ML Runtime Engineer}{\href{https://www.cerebras.net/}{Cerebras Systems}}{May 2024 -- Present}
+      \resumeItemListStart
+      \resumeItem{Implemented a runtime virtual memory system in \textbf{C++} which pre-emptively loads data immediately before it is accessed, enabling off-chip memory to be used for the first time with only a \textbf{\%10} performance penalty}
+      \resumeItem{Triaged and addressed \textbf{20+} failing tests within a high-priority test suite which is run nightly}
+      \resumeItem{Developed a test variant which enabled performance testing of a single runtime node for the first time and decreased testing overhead by avoiding the generation of unnecessary input tensors}
+      \resumeItemListEnd
       
-      \resumeSubheading
-      {\small{Research Student} \href{https://github.com/KidneyOS/KidneyOS}{\footnotesize\faIcon{external-link-alt}}}{\small{May 2024 -- Present}}
-      {University of Toronto}{}
-        \resumeItemListStart
-        \resumeItem{Worked under Prof.\ Jack Sun to implement pedagogical operating system \textit{KidneyOS} in \textbf{Rust} for an introductory operating systems course}
-        \resumeItem{Designed and built the process system and implemented kernel/user thread differentiation in context swtiches}
-        \resumeItem{Implemented [ TODO: list ] system calls}
-        \resumeItemListEnd
+    \resumeSubheading
+    {Research Assistant}{University of Toronto \href{https://github.com/KidneyOS/KidneyOS}{\footnotesize\faIcon{external-link-alt}}}{\small{May 2024 -- Present}}
+    {Supervisor: Prof.\ Jack Sun}{}
+      \resumeItemListStart
+      \resumeItem{Worked on a team of $11$ to implement a pedagogical kernel \texttt{KidneyOS} in \textbf{Rust} to be used in an introductory operating systems course with \textbf{500+} students annually}
+      \resumeItem{Built the process control system and integrated the user thread handling into our context switching module}
+      \resumeItem{Implemented kernel/user thread differentiation and the \texttt{exit}, \texttt{fork}, \texttt{read}, \texttt{write}, and \texttt{waitpid} system calls}
+      \resumeItemListEnd
 
     \resumeSubheading
-    {\small{Machine Learning Researcher} \href{https://github.com/ff-zhang/mocap-mujoco}{\footnotesize\faIcon{external-link-alt}}}{\small{July 2023 -- May 2024}}
-    {\href{https://bmolab.artsci.utoronto.ca/}{BMO Lab}, University of Toronto}{}
+    {Machine Learning Researcher}{\href{https://bmolab.artsci.utoronto.ca/}{BMO Lab}, University of Toronto \href{https://github.com/ff-zhang/mocap-mujoco}{\footnotesize\faIcon{external-link-alt}}}{July 2023 -- May 2024}
+    {Supervisor: Prof.\ David Rokeby}{}
       \resumeItemListStart
-      \resumeItem{Worked under Prof.\ David Rokeby to integrate motion-capture suits and diffusion models into live performances}
+      % \resumeItem{Worked under  to integrate motion-capture suits and diffusion models into live performances}
       \resumeItem{Applied forward dynamics in real-time on motion-capture data using \textbf{MuJoCo}, providing joint-level control of the model and the option to extract physical data using inverse dynamics}
-      \resumeItem{Explored the use of reinforcement learning to imitate input movements from motion capture suits in real-time}
+      \resumeItem{Used imitation learning to enable humanoid models to copy movements from motion capture suits in real-time}
       \resumeItemListEnd
 
       \resumeSubheading
-      {\small{Research Assistant} \href{https://github.com/ff-zhang/t-cell-response-encoder/tree/master}{\footnotesize\faIcon{external-link-alt}}}{\small{May 2023 -- May 2024}}
-      {\href{https://www.physics.utoronto.ca/~zilmana/}{Biological Physics Group}, University of Toronto}{}%{Python, PyTorch}
+      {Research Assistant}{\href{https://www.physics.utoronto.ca/~zilmana/}{Biological Physics Group}, University of Toronto \href{https://github.com/ff-zhang/t-cell-response-encoder/tree/master}{\footnotesize\faIcon{external-link-alt}}}{May 2023 -- May 2024}
+      {Supervisor: Prof.\ Anton Zilman}{}
         \resumeItemListStart
-        \resumeItem{Worked under Prof.\ Anton Zilman to model receptor signalling via soluble ligands with a high degree of cross-talk}
-        \resumeItem{Built a feed-forward network in \textbf{PyTorch} that predicts the cytokine dynamics of T-cells in response to antigens}
-        \resumeItem{Showed two variables are sufficient to determine cytokine concentrations (as predicted by previous theoretical work) because the model predicted the correct outputs with \textbf{0.01\%} error using two hidden variables}
+        % \resumeItem{Worked with a group of $4$ to model receptor signalling via soluble ligands with a high degree of cross-talk}
+        \resumeItem{Reimplemented a data pre-processing pipeline which processes raw cytokine data and extracts integral features}
+        \resumeItem{Built a feed-forward network in \textbf{PyTorch} that predicts the cytokine dynamics of T cells in response to antigens}
+        \resumeItem{With a team of $4$, showed two variables are sufficient to determine cytokine concentrations because our model predicted the correct output concentration with \textbf{0.01\%} error using a bottleneck with $2$ dimensions}
         \resumeItemListEnd
         
-    % \item
-    % \small\textbf{Identifying Suggestions in Student Evaluations using Deep Learning Models} \\
-    % \hfill \textit{Python, TensorFlow, scikit-learn, Numpy}
       \resumeSubheading
-      % {\small{Extracting Suggestions From Student Evaluations} \href{https://github.com/ff-zhang/extracting-suggestions}{\footnotesize\faIcon{external-link-alt}}}{\small{May 2022 -- Sept.\ 2022}}
-      {\small{Research Student \href{https://github.com/ff-zhang/extracting-suggestions}{\footnotesize\faIcon{external-link-alt}}}}{\small{May 2022 -- Sept.\ 2022}}
-      {Physics Education Group, University of Toronto}{}%{Python, TensorFlow, scikit-learn}
+      {Research Student}{Physics Education Group, University of Toronto \href{https://github.com/ff-zhang/extracting-suggestions}{\footnotesize\faIcon{external-link-alt}}}{May 2022 -- Sept.\ 2022}
+      {Supervisor: Prof.\ Carolyn Sealfon}{}
       \resumeItemListStart
-        \resumeItem{Worked with Prof.\ Carolyn Sealfon to develop suggestion extraction models for feedback from physics courses}
+        % \resumeItem{Worked with  to develop suggestion extraction models for feedback from physics courses}
         \resumeItem{Created a dataset of \textbf{{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}11 000} sentences from student feedback which labels whether they contain suggestions}
-        \resumeItem{Compared the effectiveness of statistical and deep-learning classifiers at extracting suggestions using \textbf{scikit-learn} and  \textbf{TensorFlow} respectively}
+        \resumeItem{Compared the effectiveness of statistical and deep-learning classifiers at identifying suggestions using \textbf{scikit-learn} and  \textbf{TensorFlow} respectively}
         \resumeItem{Demonstrated the efficacy of a BERT classifier at addressing this problem with it achieving an F${}_1$ score of \textbf{0.823}}
       \resumeItemListEnd
     \resumeSubHeadingListEnd
+
+  %-----------PROGRAMMING SKILLS-----------
+  \section{Technical Skills}
+    \begin{itemize}[leftmargin=0.15in, label={}]
+        \item\begin{tabular}{l@{\hspace{0.8em}}l}
+        \small\textbf{Languages} & \small{C, C++, Python, Rust, Bash, Java} \\
+        \small\textbf{Frameworks} & \small{PyTorch, TensorFlow, scikit-learn, NumPy, Pandas, SciPy, Matplotlib, MuJoCo, Eigen3} \\ % Vue.js, Django, Bootstrap4, Redis, MySQL, spaCy
+        \small\textbf{Tools} & \small{Git, gdb, Linux, shell, CMake, Qemu, Google Colab, Jupyter, Anaconda, Docker, WSL, Slurm}
+      \end{tabular}
+    \end{itemize}
 
 \end{document}
