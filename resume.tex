@@ -75,7 +75,7 @@
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \small{\textbf{#1}; {#2}} & \small{#3} \\[-0.05em]
-      \emph{\small{#4}} & \textit{\small #5} \\
+      \textit{\small{#4}} & \textit{\small #5}
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -90,14 +90,21 @@
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{\small #1} & \small{#2} \\
-      \textit{\small#3} & \textit{\small #4} \\
+      \textit{\small#3} & \textit{\small #4}
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubheadingFour}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\small #1} & \small{#2}
     \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
+      \textit{\small#1} & \textit{\small #2}
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -120,7 +127,6 @@
 \newcommand{\rom}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
 
 %-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
@@ -129,126 +135,107 @@
 %----------HEADING----------
 
 \begin{center}
-    \textbf{\LARGE \scshape \censor{Felix Zhang}} \\ \vspace{1pt}
-    \footnotesize\faIcon{linkedin} \small\censor{\href{https://www.linkedin.com/in/felixfzhang/}{\underline{felixfzhang}}} $|$ 
+    \textbf{\LARGE \scshape Felix Zhang} \\ \vspace{1pt}
+    \footnotesize\faIcon{envelope} \censor{\href{mailto:felixfzhang@cs.toronto.edu}{\underline{felixfzhang@cs.toronto.edu}}} $|$ 
     \footnotesize\faIcon{github} \small\censor{\href{https://github.com/ff-zhang}{\underline{ff-zhang}}} $|$ 
-    \footnotesize\faIcon{envelope} \censor{\href{mailto:felixf.zhang@utoronto.ca}{\underline{felixf.zhang@utoronto.ca}}}
-    % \footnotesize\faIcon{phone} \censor{(778) 678-7918}
+    \footnotesize\faIcon{linkedin} \small\censor{\href{https://www.linkedin.com/in/felixfzhang/}{\underline{felixfzhang}}}
     % \footnotesize\faIcon{globe} \censor{\href{https://ff-zhang.github.io/}{\underline{ff-zhang.github.io}}}
 \end{center}
 
 
 %-----------EDUCATION-----------
 \section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheadingThree
-      {University of Toronto}{Sept. 2021 -- May 2025}
-      {Honours Bachelor of Science in Computer Science, Major in Mathematics}{\censor{3.95}/4.0 cGPA}
-      \resumeItemListStart
-      \resumeItem{\textbf{Coursework:}
-        % Software Design; 
-        % Software Tools and Systems;
-        Operating Systems;
-        % Intro.\ to AI; % Artificial Intelligence; 
-        % Intro.\ to Machine Learning;
-        Neural Networks and Deep Learning;
-        Probabilistic Learning and Reasoning;
-        Intro.\ to Image Understanding;
-        % Enriched Data Structures and Analysis; 
-        Algorithm Design, Analysis and Complexity; 
-        Advanced Algorithm Design;
-        % Computer Organization; 
-        Computational Complexity and Computability;
-        % Computability and Logic;
-        % Analysis \rom{2};
-        Complex Analysis \rom{1};
-        Real Analysis \rom{1};
-        % Groups, Rings, and Fields;
-        Mathematical Probability
-        % Algebra \rom{2};
-        % Probability and Statistics \rom{1}
-        \unskip
-      }
+\resumeSubHeadingListStart
+
+\resumeSubheadingThree
+  {University of Toronto}{Sept. 2025 -- June 2027}
+  {Masters of Science in Computer Science}{}
+
+\resumeSubheadingThree
+  {University of Toronto}{Sept. 2021 -- June 2025}
+  {Honours Bachelor of Science in Computer Science; Major in Mathematics}{\censor{3.96}/4.0 cGPA}
       \resumeItem{\textbf{Awards:}
-        Fields Undergraduate Summer Research Program (FUSRP) (\$\censor{3 800}),
-        Louis Savlov Scholarships in Sciences And Humanities (\$\censor{500}),
-        Malcolm Wallace Scholarship (\$\censor{4 500}),
-        University of Toronto Scholar (\$\censor{7 500}),
-        Dean's List Scholar,
-        B.C.\ Achievement Scholarship (\$\censor{1 250}),
-        District/Authority Scholarship (\$\censor{1 250})
-      }
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
+      Fields Undergraduate Summer Research Program (FUSRP) (\$\censor{3 800}),
+      Louis Savlov Scholarships in Sciences And Humanities (\$\censor{500}),
+      Malcolm Wallace Scholarship (\$\censor{4 500}),
+      University of Toronto Scholar (\$\censor{7 500}),
+      Dean's List Scholar,
+      B.C.\ Achievement Scholarship (\$\censor{1 250}),
+      District/Authority Scholarship (\$\censor{1 250})
+    }
+
+\resumeSubHeadingListEnd
+
+\section{Publications}
+\resumeSubHeadingListStart
+
+\resumeSubheadingFour{PD3: Prefetching Data with DPUs for Disaggregated Memory}{May 2026}
+\resumeSubItem{
+  \vspace{-2pt}Sidharth Sankhe, Felix Zhang, Umayrah Chonee, Sherman Lim, Jason Hu, Jialin Li, Qizhen Zhang\\
+  \textit{23\textsuperscript{\,rd} USENIX Symposium on Networked Systems Design and Implementation}
+}
+
+\resumeItemListEnd
 
 %-----------EXPERIENCE-----------
-  \section{Experience}
-    \resumeSubHeadingListStart
-    
-    \resumeSubheading
-    {Research Assistant}{\href{https://hollandbloorview.ca/research-education/bloorview-research-institute/research-centres-labs/prism-lab}{PRISM Lab}, Bloorview Research Institute}{June 2024 -- Present}
-    {Supervisors: Erica Floreani and Prof.\ Tom Chau; Funded by: FUSRP}{}
-      \resumeItemListStart
-      % \resumeItem{Worked under  on denoising electroencephalogram (EEG) data with deep-learning models}
-      \resumeItem{Curated deep-learning models from the literature on denoising electroencephalogram (EEG) data in a team of $4$ and benchmarked them on the \texttt{EEGDenoiseNet} dataset}
-      \resumeItem{Investigated the applicability of end-to-end transformer models to denoise EEG signals and the impact of using signals' time-frequency representation as input}
-      \resumeItemListEnd
-      
-    \resumeSubheadingTwo
-    {ML Runtime Engineer}{\href{https://www.cerebras.net/}{Cerebras Systems}}{May 2024 -- Present}
-      \resumeItemListStart
-      \resumeItem{Implemented a runtime virtual memory system in \textbf{C++} which pre-emptively loads data immediately before it is accessed, enabling off-chip memory to be used for the first time with only a \textbf{\%10} performance penalty}
-      \resumeItem{Triaged and addressed \textbf{20+} failing tests within a high-priority test suite which is run nightly}
-      \resumeItem{Developed a test variant which enabled performance testing of a single runtime node for the first time and decreased testing overhead by avoiding the generation of unnecessary input tensors}
-      \resumeItemListEnd
-      
-    \resumeSubheading
-    {Research Assistant}{University of Toronto \href{https://github.com/KidneyOS/KidneyOS}{\footnotesize\faIcon{external-link-alt}}}{\small{May 2024 -- Present}}
-    {Supervisor: Prof.\ Jack Sun}{}
-      \resumeItemListStart
-      \resumeItem{Worked on a team of $11$ to implement a pedagogical kernel \texttt{KidneyOS} in \textbf{Rust} to be used in an introductory operating systems course with \textbf{500+} students annually}
-      \resumeItem{Built the process control system and integrated the user thread handling into our context switching module}
-      \resumeItem{Implemented kernel/user thread differentiation and the \texttt{exit}, \texttt{fork}, \texttt{read}, \texttt{write}, and \texttt{waitpid} system calls}
-      \resumeItemListEnd
 
-    \resumeSubheading
-    {Machine Learning Researcher}{\href{https://bmolab.artsci.utoronto.ca/}{BMO Lab}, University of Toronto \href{https://github.com/ff-zhang/mocap-mujoco}{\footnotesize\faIcon{external-link-alt}}}{July 2023 -- May 2024}
-    {Supervisor: Prof.\ David Rokeby}{}
-      \resumeItemListStart
-      % \resumeItem{Worked under  to integrate motion-capture suits and diffusion models into live performances}
-      \resumeItem{Applied forward dynamics in real-time on motion-capture data using \textbf{MuJoCo}, providing joint-level control of the model and the option to extract physical data using inverse dynamics}
-      \resumeItem{Used imitation learning to enable humanoid models to copy movements from motion capture suits in real-time}
-      \resumeItemListEnd
+\section{Research Experience}
+\resumeSubHeadingListStart
 
-      \resumeSubheading
-      {Research Assistant}{\href{https://www.physics.utoronto.ca/~zilmana/}{Biological Physics Group}, University of Toronto \href{https://github.com/ff-zhang/t-cell-response-encoder/tree/master}{\footnotesize\faIcon{external-link-alt}}}{May 2023 -- May 2024}
-      {Supervisor: Prof.\ Anton Zilman}{}
-        \resumeItemListStart
-        % \resumeItem{Worked with a group of $4$ to model receptor signalling via soluble ligands with a high degree of cross-talk}
-        \resumeItem{Reimplemented a data pre-processing pipeline which processes raw cytokine data and extracts integral features}
-        \resumeItem{Built a feed-forward network in \textbf{PyTorch} that predicts the cytokine dynamics of T cells in response to antigens}
-        \resumeItem{With a team of $4$, showed two variables are sufficient to determine cytokine concentrations because our model predicted the correct output concentration with \textbf{0.01\%} error using a bottleneck with $2$ dimensions}
-        \resumeItemListEnd
-        
-      \resumeSubheading
-      {Research Student}{Physics Education Group, University of Toronto \href{https://github.com/ff-zhang/extracting-suggestions}{\footnotesize\faIcon{external-link-alt}}}{May 2022 -- Sept.\ 2022}
-      {Supervisor: Prof.\ Carolyn Sealfon}{}
-      \resumeItemListStart
-        % \resumeItem{Worked with  to develop suggestion extraction models for feedback from physics courses}
-        \resumeItem{Created a dataset of \textbf{{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}11 000} sentences from student feedback which labels whether they contain suggestions}
-        \resumeItem{Compared the effectiveness of statistical and deep-learning classifiers at identifying suggestions using \textbf{scikit-learn} and  \textbf{TensorFlow} respectively}
-        \resumeItem{Demonstrated the efficacy of a BERT classifier at addressing this problem with it achieving an F${}_1$ score of \textbf{0.823}}
-      \resumeItemListEnd
-    \resumeSubHeadingListEnd
+\resumeSubheading
+{Research Assistant}{\href{https://fardatalab.org/}{Far Data Lab}, University of Toronto}{\small{Sept.\ 2024 -- Aug.\ 2024}}
+{Supervisor:\ Prof.\ Qizhen Zhang}{}
+  \resumeItemListStart
+  \resumeItem{Investigated offloading computations onto SmartNICs and data processing unit (DPUs)}
+  % \resumeItem{Implemented the \textit{Monodepth2} depth estimation model in \textbf{C++} from scratch}
+  \resumeItem{Parallelized the execution of \textit{Monodepth2} in \textbf{Python} and \textbf{C++} with the latter achieving linear performance scaling with the number of threads}
+  \resumeItem{Built a DPU-based prefetcher \textit{PD3} with a team of $6$ which intercepts network traffic to predict and prefetch data for tiered key-value stores}
+  \resumeItem{Designed an external service for offloading shuffle operations from database management systems which supports either a memory or storage backend managed by DPUs}
+  \resumeItemListEnd
+  
+\resumeSubheading
+{Research Assistant}{University of Toronto \href{https://github.com/KidneyOS/KidneyOS}{\footnotesize\faIcon{external-link-alt}}}{\small{March 2024 -- Dec.\ 2024}}
+{Supervisor:\ Prof.\ Jack Sun}{}
+  \resumeItemListStart
+  \resumeItem{Worked on a team of $11$ to implement a pedagogical kernel \textit{KidneyOS} in \textbf{Rust} to be used in an introductory operating systems course with \textbf{500+} students annually}
+  \resumeItem{Enabled thread creation and destruction, multi-threading, pre-emptive scheduling within the thread system}
+  \resumeItem{Led a team of $3$ to implement POSIX-compatible syscalls and add support running user-space executables}
+  \resumeItemListEnd
 
-  %-----------PROGRAMMING SKILLS-----------
-  \section{Technical Skills}
-    \begin{itemize}[leftmargin=0.15in, label={}]
-        \item\begin{tabular}{l@{\hspace{0.8em}}l}
-        \small\textbf{Languages} & \small{C, C++, Python, Rust, Bash, Java} \\
-        \small\textbf{Frameworks} & \small{PyTorch, TensorFlow, scikit-learn, NumPy, Pandas, SciPy, Matplotlib, MuJoCo, Eigen3} \\ % Vue.js, Django, Bootstrap4, Redis, MySQL, spaCy
-        \small\textbf{Tools} & \small{Git, gdb, Linux, shell, CMake, Qemu, Google Colab, Jupyter, Anaconda, Docker, WSL, Slurm}
-      \end{tabular}
-    \end{itemize}
+\resumeSubheading
+{Research Assistant}{\href{https://hollandbloorview.ca/research-education/bloorview-research-institute/research-centres-labs/prism-lab}{PRISM Lab}, Bloorview Research Institute}{June 2024 -- Aug.\ 2024}
+{Supervisors:\ Erica Floreani and Prof.\ Tom Chau; Funded by:\ FUSRP}{}
+  \resumeItemListStart
+  % \resumeItem{Worked under  on denoising electroencephalogram (EEG) data with deep-learning models}
+  \resumeItem{Curated deep-learning models from the literature on denoising electroencephalogram (EEG) data in a team of $4$ and benchmarked them on the \textit{EEGDenoiseNet} dataset}
+  \resumeItem{Investigated the applicability of end-to-end transformer models to denoise EEG signals and the impact of using signals' time-frequency representation as input on model performance}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\section{Industry Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheadingTwo
+{ML Runtime Engineer}{\href{https://www.cerebras.net/}{Cerebras Systems}}{May 2024 -- Aug.\ 2025}
+  \resumeItemListStart
+  \resumeItem{Implemented a runtime virtual memory system in \textbf{C++} with a team of $3$ which pre-emptively loads data before it is accessed, allowing off-chip memory to be used for the first time with only a \textbf{10\%} performance penalty}
+  \resumeItem{Added support for network storage in the paging system with remote direct memory access, providing \textbf{100} GB/s read and write speeds with \textbf{10} $\mu$s latency to multiple remote servers}
+  \resumeItem{Enabled the ability log and replay the network operations, decreasing the time to recreate stalls and timeouts by over \textbf{80\%}, and setup unit tests to automatically catch breakages and performance regressions in the network layer}
+  \resumeItem{Improved the throughput of the network layer by \textbf{6\%} when transferring data by implementing best practices for remote direct memory access and reducing setup overhead}
+  \resumeItem{Determined the cable and port mapping for a one node cluster which will be used for all future deployments}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+      \item\begin{tabular}{l@{\hspace{0.8em}}l}
+      \small\textbf{Languages} & \small{C++, Rust, Python, C, C\#, Bash, Java} \\
+      \small\textbf{Frameworks} & \small{Catch2, PyTest, PyTorch, TensorFlow, OpenCV, scikit-learn, NumPy, Pandas, SciPy, Eigen3} \\
+      \small\textbf{Tools} & \small{Git, Linux, Unix, tmux, CMake, Docker, Anaconda, Google Colab, QEMU, Jupyter, WSL, Slurm}
+    \end{tabular}
+  \end{itemize}
 
 \end{document}
