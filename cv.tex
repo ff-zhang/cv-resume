@@ -127,17 +127,12 @@
 \newcommand{\rom}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
 
 %-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
 \StopCensoring
 
 %----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
 
 \begin{center}
     \textbf{\LARGE \scshape Felix Zhang} \\ \vspace{1pt}
@@ -154,7 +149,7 @@
 
 \resumeSubheadingThree
   {University of Toronto}{Sept. 2025 -- June 2027}
-  {Master of Science in Computer Science}{}
+  {Masters of Science in Computer Science}{}
 
 \resumeSubheadingThree
   {University of Toronto}{Sept. 2021 -- June 2025}
@@ -162,22 +157,18 @@
 
 \resumeSubHeadingListEnd
 
-%-----------EXPERIENCE-----------
-
-\section{Industry Experience}
+\section{Publications}
 \resumeSubHeadingListStart
 
-\resumeSubheadingTwo
-{ML Runtime Engineer}{\href{https://www.cerebras.net/}{Cerebras Systems}}{May 2024 -- Present}
-  \resumeItemListStart
-  \resumeItem{Implemented a runtime virtual memory system in \textbf{C++} with a team of $3$ which pre-emptively loads data before it is accessed, allowing off-chip memory to be used for the first time with only a \textbf{10\%} performance penalty}
-  \resumeItem{Added support for network storage in the paging system with remote direct memory access, providing \textbf{100} GB/s read and write speeds with \textbf{10} $\mu$s latency to multiple remote servers}
-  \resumeItem{Enabled the ability log and replay the network operations, decreasing the time to recreate stalls and timeouts by over \textbf{80\%}, and setup unit tests to automatically catch breakages and performance regressions in the network layer}
-  \resumeItem{Improved the throughput of the network layer by \textbf{6\%} when transferring data by implementing best practices for remote direct memory access and reducing setup overhead}
-  \resumeItem{Determined the cable and port mapping for a one node cluster which will be used for all future deployments}
-  \resumeItemListEnd
+\resumeSubheadingFour{PD3: Prefetching Data with DPUs for Disaggregated Memory}{May 2026}
+\resumeSubItem{
+  \vspace{-2pt}Sidharth Sankhe, Felix Zhang, Umayrah Chonee, Sherman Lim, Jason Hu, Jialin Li, Qizhen Zhang\\
+  \textit{23\textsuperscript{\,rd} USENIX Symposium on Networked Systems Design and Implementation}
+}
 
-\resumeSubHeadingListEnd
+\resumeItemListEnd
+
+%-----------EXPERIENCE-----------
 
 \section{Research Experience}
 \resumeSubHeadingListStart
@@ -228,6 +219,21 @@
   \resumeItem{Created a dataset of \textbf{{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}11 000} sentences from student feedback which labels whether they contain suggestions}
   \resumeItem{Compared the effectiveness of statistical and deep-learning classifiers at identifying suggestions using \textbf{scikit-learn} and  \textbf{TensorFlow} respectively}
   \resumeItem{Demonstrated the efficacy of a BERT classifier at addressing this problem with it achieving an F${}_1$ score of \textbf{0.823}}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\section{Industry Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheadingTwo
+{ML Runtime Engineer}{\href{https://www.cerebras.net/}{Cerebras Systems}}{May 2024 -- Present}
+  \resumeItemListStart
+  \resumeItem{Implemented a runtime virtual memory system in \textbf{C++} with a team of $3$ which pre-emptively loads data before it is accessed, allowing off-chip memory to be used for the first time with only a \textbf{10\%} performance penalty}
+  \resumeItem{Added support for network storage in the paging system with remote direct memory access, providing \textbf{100} GB/s read and write speeds with \textbf{10} $\mu$s latency to multiple remote servers}
+  \resumeItem{Enabled the ability log and replay the network operations, decreasing the time to recreate stalls and timeouts by over \textbf{80\%}, and setup unit tests to automatically catch breakages and performance regressions in the network layer}
+  \resumeItem{Improved the throughput of the network layer by \textbf{6\%} when transferring data by implementing best practices for remote direct memory access and reducing setup overhead}
+  \resumeItem{Determined the cable and port mapping for a one node cluster which will be used for all future deployments}
   \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -312,9 +318,9 @@
 \section{Technical Skills}
   \begin{itemize}[leftmargin=0.15in, label={}]
       \item\begin{tabular}{l@{\hspace{0.8em}}l}
-      \small\textbf{Languages} & \small{C++, C, Rust, C\#, Java, Python} \\
-      \small\textbf{Frameworks} & \small{PyTest, PyTorch, TensorFlow, scikit-learn, NumPy, Pandas, SciPy, Matplotlib, MuJoCo, Eigen3} \\
-      \small\textbf{Tools} & \small{Git, shell, ssh, Unix, tmux, CMake, Anaconda, Google Colab, QEMU, Jupyter, WSL, Slurm}
+      \small\textbf{Languages} & \small{C++, Rust, Python, C, C\#, Bash, Java} \\
+      \small\textbf{Frameworks} & \small{Catch2, PyTest, PyTorch, TensorFlow, OpenCV, scikit-learn, NumPy, Pandas, SciPy, Eigen3} \\
+      \small\textbf{Tools} & \small{Git, Linux, Unix, tmux, CMake, Docker, Anaconda, Google Colab, QEMU, Jupyter, WSL, Slurm}
     \end{tabular}
   \end{itemize}
 
@@ -334,6 +340,12 @@
     \noalign{\vspace{0.1em}}
     \hline\hline
     \noalign{\vspace{0.2em}}
+    CSC2306\footnotemark[1] & High Performance Scientific Computing & Winter 2025 \\
+    CSC2525\footnotemark[1] & Research Topics in Database Management & Winter 2025 \\
+
+    CSC2234\footnotemark[2] & Database System Technology & Fall 2025 \\
+    CSC2235\footnotemark[1] & Cloud-native Data Management Systems & Fall 2025 \\
+
     CSC2221\footnotemark[1] & Introduction to the Theory of Distributed Computing & Fall 2024 \\
 
     CSC324 & Principles of Programming Languages & Winter 2024 \\
@@ -350,7 +362,6 @@
 
     MAT327 & Introduction to Topology & Summer 2023 \\
 
-    % CSC311 & Introduction to Machine Learning & Winter 2023 \\
     CSC373 & Algorithm Design, Analysis and Complexity & Winter 2023 \\
     CSC384 & Introduction to Artificial Intelligence & Winter 2023 \\
     CSC438 & Computability and Logic & Winter 2023 \\
