@@ -90,14 +90,16 @@
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{\small #1} & \small{#2} \\
-      \textit{\small#3} & \textit{\small #4}
+      {\small #3} & \textit{\small #4}
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeSubheadingFour}[2]{
+\newcommand{\resumeSubheadingFour}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{\small #1} & \small{#2}
+      \textbf{\small #1} & \small{#2} \\
+      \small{#3} \\
+      \textit{\small #4}
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -147,9 +149,10 @@
 \section{Education}
 \resumeSubHeadingListStart
 
-\resumeSubheadingThree
-  {University of Toronto}{Sept. 2025 -- June 2027}
-  {Masters of Science in Computer Science}{}
+\resumeSubheadingFour
+  {University of Toronto}{Sept. 2025 -- Jan.\ 2027}
+  {Master of Science in Computer Science}
+  {Advisor: Qizhen Zhang}
 
 \resumeSubheadingThree
   {University of Toronto}{Sept. 2021 -- June 2025}
@@ -157,14 +160,13 @@
 
 \resumeSubHeadingListEnd
 
+%-----------PUBLICATION-----------
 \section{Publications}
 \resumeSubHeadingListStart
 
-\resumeSubheadingFour{PD3: Prefetching Data with DPUs for Disaggregated Memory}{May 2026}
-\resumeSubItem{
-  \vspace{-2pt}Sidharth Sankhe, Felix Zhang, Umayrah Chonee, Sherman Lim, Jason Hu, Jialin Li, Qizhen Zhang\\
-  \textit{23\textsuperscript{\,rd} USENIX Symposium on Networked Systems Design and Implementation}
-}
+\resumeSubheadingFour{PD3: Prefetching Data with DPUs for Disaggregated Memory}{\textit{Submitted}}%{May 2026}
+  {Sidharth Sankhe, Felix Zhang, Umayrah Chonee, Sherman Lim, Jason Hu, Jialin Li, Qizhen Zhang}
+  {23\textsuperscript{\,rd} USENIX Symposium on Networked Systems Design and Implementation}
 
 \resumeItemListEnd
 
@@ -177,11 +179,11 @@
 {Research Assistant}{\href{https://fardatalab.org/}{Far Data Lab}, University of Toronto}{\small{Sept.\ 2024 -- Aug.\ 2025}}
 {Supervisor:\ Prof.\ Qizhen Zhang}{}
   \resumeItemListStart
-  \resumeItem{Investigated offloading computations onto SmartNICs and data processing unit (DPUs)}
+  \resumeItem{Investigated offloading computation onto data processing unit (DPUs) to enable efficient, scalable data processing}
   % \resumeItem{Implemented the \textit{Monodepth2} depth estimation model in \textbf{C++} from scratch}
-  \resumeItem{Parallelized the execution of \textit{Monodepth2} in \textbf{Python} and \textbf{C++} with the latter achieving linear performance scaling with the number of threads}
-  \resumeItem{Built a DPU-based prefetcher \textit{PD3} with a team of $6$ which intercepts network traffic to predict and prefetch data for tiered key-value stores}
-  \resumeItem{Designed an external service for offloading shuffle operations from database management systems which supports either a memory or storage backend managed by DPUs}
+  \resumeItem{Implemented and parallelized the execution of \textit{Monodepth2} in \textbf{C++}, achieving linear performance scaling with the number of threads when running on a DPU}
+  \resumeItem{Built a DPU-based prefetcher \textit{PD3} with a team of $6$ which intercepts network traffic to predict and prefetch data for tiered key-value stores, eliminating the network overhead introduced when fetching entries from remote}
+  \resumeItem{Designed an external service for offloading shuffle operations onto DPUs in distributed data analytics which supports both disagregated memory and storage backends}
   \resumeItemListEnd
   
 \resumeSubheading
@@ -190,12 +192,12 @@
   \resumeItemListStart
   \resumeItem{Worked on a team of $11$ to implement a pedagogical kernel \textit{KidneyOS} in \textbf{Rust} to be used in an introductory operating systems course with \textbf{500+} students annually}
   \resumeItem{Enabled thread creation and destruction, multi-threading, pre-emptive scheduling within the thread system}
-  \resumeItem{Led a team of $3$ to implement POSIX-compatible syscalls and add support running user-space executables}
+  \resumeItem{Led a team of $3$ to implement POSIX-compatible syscalls and add support for running user-space executables}
   \resumeItemListEnd
 
 \resumeSubheading
 {Research Assistant}{\href{https://hollandbloorview.ca/research-education/bloorview-research-institute/research-centres-labs/prism-lab}{PRISM Lab}, Bloorview Research Institute}{June 2024 -- Aug.\ 2024}
-{Supervisors:\ Erica Floreani and Prof.\ Tom Chau; Funded by:\ FUSRP}{}
+{Supervisors:\ Erica Floreani \& Prof.\ Tom Chau; Funded by:\ FUSRP}{}
   \resumeItemListStart
   % \resumeItem{Worked under  on denoising electroencephalogram (EEG) data with deep-learning models}
   \resumeItem{Curated deep-learning models from the literature on denoising electroencephalogram (EEG) data in a team of $4$ and benchmarked them on the \textit{EEGDenoiseNet} dataset}
@@ -223,17 +225,23 @@
 
 \resumeSubHeadingListEnd
 
-\section{Industry Experience}
+\section{Work Experience}
 \resumeSubHeadingListStart
 
 \resumeSubheadingTwo
-{ML Runtime Engineer}{\href{https://www.cerebras.net/}{Cerebras Systems}}{May 2024 -- Aug.\ 2025}
+{Teaching Assistant}{\href{https://www.cerebras.net/}{University of Toronto}}{Sept.\ 2025 -- Present}
+  \resumeItemListStart
+  \resumeItem{Led tutorials and held office hours for \textit{Introduction to Operating Systems}}
+  \resumeItemListEnd
+
+\resumeSubheadingTwo
+{ML Cluster Engineer}{\href{https://www.cerebras.net/}{Cerebras Systems}}{May 2024 -- Aug.\ 2025}
   \resumeItemListStart
   \resumeItem{Implemented a runtime virtual memory system in \textbf{C++} with a team of $3$ which pre-emptively loads data before it is accessed, allowing off-chip memory to be used for the first time with only a \textbf{10\%} performance penalty}
   \resumeItem{Added support for network storage in the paging system with remote direct memory access, providing \textbf{100} GB/s read and write speeds with \textbf{10} $\mu$s latency to multiple remote servers}
   \resumeItem{Enabled the ability log and replay the network operations, decreasing the time to recreate stalls and timeouts by over \textbf{80\%}, and setup unit tests to automatically catch breakages and performance regressions in the network layer}
   \resumeItem{Improved the throughput of the network layer by \textbf{6\%} when transferring data by implementing best practices for remote direct memory access and reducing setup overhead}
-  \resumeItem{Determined the cable and port mapping for a one node cluster which will be used for all future deployments}
+  \resumeItem{Determined the cable and port mapping for one, two, and four rack clusters used in upcoming deploymenets}
   \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -251,10 +259,6 @@
     {\textbf{Second Malcom Wallace Scholarship} (\censor{\$5 000}), University of Toronto}{Sept.\ 2021 -- Oct.\ 2024}
     \resumeProjectHeading
     {\textbf{University of Toronto Scholar} (\censor{\$7 500}), University of Toronto}{Sept.\ 2021}
-    \resumeProjectHeading
-    {\textbf{B.C.\ Achievement Scholarship} (\censor{\$1 250}), Government of British Columbia}{Aug.\ 2021}
-    \resumeProjectHeading
-    {\textbf{District/Authority Scholarship} (\censor{\$1 250}), Government of British Columbia}{Aug.\ 2021}
   \resumeSubHeadingListEnd
   \vspace{-0.8em}
 
@@ -292,6 +296,13 @@
   \resumeSubHeadingListStart
 
     \resumeProjectHeading
+    {\textbf{KivikDB}}{\small{Sept.\ 2025 -- Present}}
+    \resumeItemListStart
+      \resumeItem{Built a key-value database in \textbf{Rust} which uses an LSM-tree in storage with in-memory Bloom filters}
+      \resumeItem{Implemented the filter and leveling policies respectively introduced in the \href{https://doi.org/10.1145/3035918.3064054}{Monkey} and \href{https://doi.org/10.1145/3183713.3196927}{Dostoevsky} key-value stores}
+    \resumeItemListEnd
+
+    \resumeProjectHeading
     {\textbf{Student Response Classifier}}{\small{Mar.\ 2023 -- Apr.\ 2023}}
     \resumeItemListStart
       \resumeItem{Developed a 3-parameter logistic item response theory classifier in \textbf{PyTorch}, using alternating gradient descent for training, to predict the correctness of student answers to multiple-choice questions}
@@ -313,16 +324,6 @@
       \resumeItem{Artificially generated a dataset of \textbf{5 000} noisy, blurred images using a Poisson-Gaussian noise model}
         \resumeItem{Discovered that integrating the two models offers marginal improvements over their individual performance}
       \resumeItemListEnd
-
-%-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
-  \begin{itemize}[leftmargin=0.15in, label={}]
-      \item\begin{tabular}{l@{\hspace{0.8em}}l}
-      \small\textbf{Languages} & \small{C++, Rust, Python, C, C\#, Bash, Java} \\
-      \small\textbf{Frameworks} & \small{Catch2, PyTest, PyTorch, TensorFlow, OpenCV, scikit-learn, NumPy, Pandas, SciPy, Eigen3} \\
-      \small\textbf{Tools} & \small{Git, Linux, Unix, tmux, CMake, Docker, Anaconda, Google Colab, QEMU, Jupyter, WSL, Slurm}
-    \end{tabular}
-  \end{itemize}
 
   \resumeSubHeadingListEnd
 
