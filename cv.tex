@@ -74,7 +74,7 @@
 \newcommand{\resumeSubheading}[5]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \small{\textbf{#1}; {#2}} & \small{#3} \\[-0.05em]
+      \small{\textbf{#1}; {#2}} & \small{#3} \\
       \textit{\small{#4}} & \textit{\small #5}
     \end{tabular*}\vspace{-7pt}
 }
@@ -122,7 +122,15 @@
 \newcommand{\resumeProjectHeading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
+      \small{#1} & \small{#2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeadingTwo}[3]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small{#1} & \small{#2} \\
+      \small{#3} \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -173,7 +181,7 @@
 \section{Publications}
 \resumeSubHeadingListStart
 
-\resumeSubheadingFour{PD3:\ Prefetching Data with DPUs for Disaggregated Memory}{\emph{To Appear}}
+\resumeSubheadingFour{PD3:\ Prefetching Data with DPUs for Disaggregated Memory \href{https://www.usenix.org/conference/nsdi26/presentation/sankhe}{\footnotesize\faIcon{external-link-alt}}}{May 5,\ 2026}
   {Sidharth Sankhe, \textbf{Felix Zhang}, Umayrah Chonee, Sherman Lim, Jason Hu, Jialin Li, Qizhen Zhang}
   {23\textsuperscript{\,rd} USENIX Symposium on Networked Systems Design and Implementation (NSDI '26)}
 
@@ -258,6 +266,8 @@
 %-----------AWARDS-----------
 \section{Awards \& Scholarships}
   \resumeSubHeadingListStart
+    \resumeProjectHeadingTwo
+    {\textbf{Queen Elizabeth II Graduate Scholarships in Science and Technology}}{July 2025 -- June 2026}{(\censor{\$15 000}), University of Toronto}
     \resumeProjectHeading
     {\textbf{Fields Undergraduate Summer Research Program} (\censor{\$3 800}), Fields Institute}{June -- Aug.\ 2024}
     \resumeProjectHeading
