@@ -115,6 +115,14 @@
     \end{tabular*}\vspace{-7pt}
 }
 
+\newcommand{\resumeProjectHeadingTwo}[3]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small{#1} & \small{#2} \\
+      \small{#3} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
@@ -154,15 +162,6 @@
 \resumeSubheadingThree
   {University of Toronto}{Sept. 2021 -- June 2025}
   {Honours Bachelor of Science in Computer Science; Major in Mathematics}{\censor{3.96}/4.0 cGPA}
-      \resumeItem{\textbf{Awards:}
-      Fields Undergraduate Summer Research Program (\$\censor{3 800}),
-      Louis Savlov Scholarship in Sciences And Humanities (\$\censor{1 000}),
-      Second Malcolm Wallace Scholarship (\$\censor{5 000}),
-      University of Toronto Scholar (\$\censor{7 500}),
-      Dean's List Scholar,
-      B.C.\ Achievement Scholarship (\$\censor{1 250}),
-      District/Authority Scholarship (\$\censor{1 250})
-    }
 
 \resumeSubHeadingListEnd
 
@@ -182,33 +181,21 @@
 \section{Research Experience}
 \resumeSubHeadingListStart
 
-\resumeSubheading
+\resumeSubheadingTwo
 {Research Assistant}{\href{https://fardatalab.org/}{Far Data Lab}, University of Toronto}{\small{Sept.\ 2024 -- Aug.\ 2024}}
-{Supervisor:\ Prof.\ Qizhen Zhang}{}
   \resumeItemListStart
   \resumeItem{Investigated offloading computations onto SmartNICs and data processing unit (DPUs)}
-  % \resumeItem{Implemented the \textit{Monodepth2} depth estimation model in \textbf{C++} from scratch}
   \resumeItem{Parallelized the execution of \textit{Monodepth2} in \textbf{Python} and \textbf{C++} with the latter achieving linear performance scaling with the number of threads}
   \resumeItem{Built a DPU-based prefetcher \textit{PD3} with a team of $6$ which intercepts network traffic to predict and prefetch data for tiered key-value stores}
   \resumeItem{Designed an external service for offloading shuffle operations from database management systems which supports either a memory or storage backend managed by DPUs}
   \resumeItemListEnd
   
-\resumeSubheading
+\resumeSubheadingTwo
 {Research Assistant}{University of Toronto \href{https://github.com/KidneyOS/KidneyOS}{\footnotesize\faIcon{external-link-alt}}}{\small{March 2024 -- Dec.\ 2024}}
-{Supervisor:\ Prof.\ Jack Sun}{}
   \resumeItemListStart
   \resumeItem{Worked on a team of $11$ to implement a pedagogical kernel \textit{KidneyOS} in \textbf{Rust} to be used in an introductory operating systems course with \textbf{500+} students annually}
   \resumeItem{Enabled thread creation and destruction, multi-threading, pre-emptive scheduling within the thread system}
   \resumeItem{Led a team of $3$ to implement POSIX-compatible syscalls and add support running user-space executables}
-  \resumeItemListEnd
-
-\resumeSubheading
-{Research Assistant}{\href{https://hollandbloorview.ca/research-education/bloorview-research-institute/research-centres-labs/prism-lab}{PRISM Lab}, Bloorview Research Institute}{June 2024 -- Aug.\ 2024}
-{Supervisors:\ Erica Floreani and Prof.\ Tom Chau; Funded by:\ FUSRP}{}
-  \resumeItemListStart
-  % \resumeItem{Worked under  on denoising electroencephalogram (EEG) data with deep-learning models}
-  \resumeItem{Curated deep-learning models from the literature on denoising electroencephalogram (EEG) data in a team of $4$ and benchmarked them on the \textit{EEGDenoiseNet} dataset}
-  \resumeItem{Investigated the applicability of end-to-end transformer models to denoise EEG signals and the impact of using signals' time-frequency representation as input on model performance}
   \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -227,6 +214,24 @@
   \resumeItemListEnd
 
 \resumeSubHeadingListEnd
+
+\section{Awards \& Scholarships}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+    {\textbf{Ontario Graduate Scholarship} (\censor{\$15 000}), University of Toronto}{May 2025 -- April 2026}
+    \resumeProjectHeadingTwo
+    {\textbf{Queen Elizabeth II Graduate Scholarships in Science and Technology} (\censor{\$15 000})}{May 2025 -- April 2026}{ (Declined), University of Toronto}
+    \resumeProjectHeading
+    {\textbf{Fields Undergraduate Summer Research Program} (\censor{\$3 800}), Fields Institute}{June -- Aug.\ 2024}
+    \resumeProjectHeading
+    {\textbf{Louis Savlov Scholarship in Sciences And Humanities} (\censor{\$1 000}), University of Toronto}{Nov.\ 2023 -- Jan.\ 2025}
+    \resumeProjectHeading
+    {\textbf{Dean's List Scholar}, University of Toronto}{Jan.\ 2022 -- June 2025}
+    \resumeProjectHeading
+    {\textbf{Second Malcom Wallace Scholarship} (\censor{\$5 000}), University of Toronto}{Sept.\ 2021 -- Oct.\ 2024}
+    \resumeProjectHeading
+    {\textbf{University of Toronto Scholar} (\censor{\$7 500}), University of Toronto}{Sept.\ 2021}
+  \resumeSubHeadingListEnd
 
 %-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
