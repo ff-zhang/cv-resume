@@ -94,10 +94,12 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeSubheadingFour}[2]{
+\newcommand{\resumeSubheadingFour}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{\small #1} & \small{#2}
+      \textbf{\small #1} & \small{#2} \\
+      \small{#3} \\
+      \textit{\small #4}
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -178,11 +180,9 @@
 \section{Publications}
 \resumeSubHeadingListStart
 
-\resumeSubheadingFour{PD3: Prefetching Data with DPUs for Disaggregated Memory}{May 2026}
-\resumeSubItem{
-  \vspace{-2pt}Sidharth Sankhe, Felix Zhang, Umayrah Chonee, Sherman Lim, Jason Hu, Jialin Li, Qizhen Zhang\\
-  \textit{23\textsuperscript{\,rd} USENIX Symposium on Networked Systems Design and Implementation}
-}
+\resumeSubheadingFour{PD3:\ Prefetching Data with DPUs for Disaggregated Memory \href{https://www.usenix.org/conference/nsdi26/presentation/sankhe}{\footnotesize\faIcon{external-link-alt}}}{May 2026}
+  {Sidharth Sankhe, \textbf{Felix Zhang}, Umayrah Chonee, Sherman Lim, Jason Hu, Jialin Li, Qizhen Zhang}
+  {23\textsuperscript{\,rd} USENIX Symposium on Networked Systems Design and Implementation (NSDI '26)}
 
 \resumeItemListEnd
 
@@ -194,7 +194,6 @@
 \resumeSubheadingTwo
 {Research Assistant}{\href{https://fardatalab.org/}{Far Data Lab}, University of Toronto}{\small{Sept.\ 2024 -- Aug.\ 2024}}
   \resumeItemListStart
-  \resumeItem{Investigated offloading computations onto SmartNICs and data processing unit (DPUs)}
   \resumeItem{Parallelized the execution of \textit{Monodepth2} in \textbf{Python} and \textbf{C++} with the latter achieving linear performance scaling with the number of threads}
   \resumeItem{Built a DPU-based prefetcher \textit{PD3} with a team of $6$ which intercepts network traffic to predict and prefetch data for tiered key-value stores}
   \resumeItem{Designed an external service for offloading shuffle operations from database management systems which supports either a memory or storage backend managed by DPUs}
