@@ -155,10 +155,11 @@
 
 \begin{center}
     \textbf{\LARGE \scshape Felix Zhang} \\ \vspace{1pt}
-    \footnotesize\faIcon{envelope} \censor{\href{mailto:felixfzhang@cs.toronto.edu}{\underline{felixfzhang@cs.toronto.edu}}} $|$ 
+    \footnotesize\faIcon{envelope} \censor{\href{mailto:felixfzhang@hotmail.com}{\underline{felixfzhang@hotmail.com}}} $|$ 
+    % \footnotesize\faIcon{envelope} \censor{\href{mailto:felixfzhang@cs.toronto.edu}{\underline{felixfzhang@cs.toronto.edu}}} $|$ 
     \footnotesize\faIcon{github} \small\censor{\href{https://github.com/ff-zhang}{\underline{ff-zhang}}} $|$ 
     \footnotesize\faIcon{linkedin} \small\censor{\href{https://www.linkedin.com/in/felixfzhang/}{\underline{felixfzhang}}}
-    % \footnotesize\faIcon{globe} \censor{\href{https://ff-zhang.github.io/}{\underline{ff-zhang.github.io}}}
+    \footnotesize\faIcon{globe} \censor{\href{https://ff-zhang.github.io/}{\underline{ff-zhang.github.io}}}
 \end{center}
 
 
@@ -166,10 +167,9 @@
 \section{Education}
 \resumeSubHeadingListStart
 
-\resumeSubheadingFive
+\resumeSubheadingThree
   {University of Toronto}{Sept.\ 2025 -- Jan.\ 2027}
   {Master of Science in Computer Science}{4.0/4.0 cGPA}
-  {Advisor:\ Prof.\ Qizhen Zhang}
 
 \resumeSubheadingThree
   {University of Toronto}{Sept.\ 2021 -- June 2025}
@@ -180,7 +180,11 @@
 \section{Publications}
 \resumeSubHeadingListStart
 
-\resumeSubheadingFour{PD3:\ Prefetching Data with DPUs for Disaggregated Memory \href{https://www.usenix.org/conference/nsdi26/presentation/sankhe}{\footnotesize\faIcon{external-link-alt}}}{May 2026}
+\resumeSubheadingFour{EFL:\ Efficient, Fault-tolerant, and Low-cost Shuffle Service with Complete DPU Offloading}{}
+  {\textbf{Felix Zhang}, Joseph Zhu, Qizhen Zhang}
+  {Under Review}
+
+\resumeSubheadingFour{\href{https://www.usenix.org/conference/nsdi26/presentation/sankhe}{PD3:\ Prefetching Data with DPUs for Disaggregated Memory}}{May 2026}
   {Sidharth Sankhe, \textbf{Felix Zhang}, Umayrah Chonee, Sherman Lim, Jason Hu, Jialin Li, Qizhen Zhang}
   {23\textsuperscript{\,rd} USENIX Symposium on Networked Systems Design and Implementation (NSDI '26)}
 
@@ -188,59 +192,51 @@
 
 %-----------EXPERIENCE-----------
 
-\section{Research Experience}
-\resumeSubHeadingListStart
-
-\resumeSubheadingTwo
-{Research Assistant}{\href{https://fardatalab.org/}{Far Data Lab}, University of Toronto}{\small{Sept.\ 2024 -- Aug.\ 2024}}
-  \resumeItemListStart
-  \resumeItem{Parallelized the execution of \textit{Monodepth2} in \textbf{Python} and \textbf{C++} with the latter achieving linear performance scaling with the number of threads}
-  \resumeItem{Built a DPU-based prefetcher \textit{PD3} with a team of $6$ which intercepts network traffic to predict and prefetch data for tiered key-value stores}
-  \resumeItem{Designed an external service for offloading shuffle operations from database management systems which supports either a memory or storage backend managed by DPUs}
-  \resumeItemListEnd
-  
-\resumeSubheadingTwo
-{Research Assistant}{University of Toronto \href{https://github.com/KidneyOS/KidneyOS}{\footnotesize\faIcon{external-link-alt}}}{\small{March 2024 -- Dec.\ 2024}}
-  \resumeItemListStart
-  \resumeItem{Worked on a team of $11$ to implement a pedagogical kernel \textit{KidneyOS} in \textbf{Rust} to be used in an introductory operating systems course with \textbf{500+} students annually}
-  \resumeItem{Enabled thread creation and destruction, multi-threading, pre-emptive scheduling within the thread system}
-  \resumeItem{Led a team of $3$ to implement POSIX-compatible syscalls and add support running user-space executables}
-  \resumeItemListEnd
-
-\resumeSubHeadingListEnd
-
 \section{Industry Experience}
 \resumeSubHeadingListStart
 
 \resumeSubheadingTwo
 {ML Runtime Engineer}{\href{https://www.cerebras.net/}{Cerebras Systems}}{May 2024 -- Aug.\ 2025}
   \resumeItemListStart
-  \resumeItem{Implemented a runtime virtual memory system in \textbf{C++} with a team of $3$ which pre-emptively loads data before it is accessed, allowing off-chip memory to be used for the first time with only a \textbf{10\%} performance penalty}
-  \resumeItem{Added support for network storage in the paging system with remote direct memory access, providing \textbf{100} GB/s read and write speeds with \textbf{10} $\mu$s latency to multiple remote servers}
+  \resumeItem{Implemented a runtime virtual memory system in \textbf{C++} which pre-emptively loads data before it is accessed, allowing off-chip memory to be used for the first time}
+  \resumeItem{Added support for network storage using remote direct memory access (RDMA), providing \textbf{100} GB/s read and write speeds with \textbf{10} $\mu$s latency to multiple remote servers}
   \resumeItem{Enabled the ability log and replay the network operations, decreasing the time to recreate stalls and timeouts by over \textbf{80\%}, and setup unit tests to automatically catch breakages and performance regressions in the network layer}
-  \resumeItem{Improved the throughput of the network layer by \textbf{6\%} when transferring data by implementing best practices for remote direct memory access and reducing setup overhead}
-  \resumeItem{Determined the cable and port mapping for a one node cluster which will be used for all future deployments}
+  \resumeItem{Improved the throughput of the network layer by \textbf{6\%} when transferring data by implementing best practices for remote direct memory access (RDMA) and reducing setup overhead in \textbf{Linux}}
   \resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
-\section{Awards \& Scholarships}
-  \resumeSubHeadingListStart
-    \resumeProjectHeading
-    {\textbf{Ontario Graduate Scholarship} (\censor{\$15 000}), University of Toronto}{May 2025 -- April 2026}
-    \resumeProjectHeadingTwo
-    {\textbf{Queen Elizabeth II Graduate Scholarships in Science and Technology} (\censor{\$15 000})}{May 2025 -- April 2026}{ (Declined), University of Toronto}
-    \resumeProjectHeading
-    {\textbf{Fields Undergraduate Summer Research Program} (\censor{\$3 800}), Fields Institute}{June -- Aug.\ 2024}
-    \resumeProjectHeading
-    {\textbf{Louis Savlov Scholarship in Sciences And Humanities} (\censor{\$1 000}), University of Toronto}{Nov.\ 2023 -- Jan.\ 2025}
-    \resumeProjectHeading
-    {\textbf{Dean's List Scholar}, University of Toronto}{Jan.\ 2022 -- June 2025}
-    \resumeProjectHeading
-    {\textbf{Second Malcom Wallace Scholarship} (\censor{\$5 000}), University of Toronto}{Sept.\ 2021 -- Oct.\ 2024}
-    \resumeProjectHeading
-    {\textbf{University of Toronto Scholar} (\censor{\$7 500}), University of Toronto}{Sept.\ 2021}
-  \resumeSubHeadingListEnd
+\section{Research Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheadingTwo
+{Research Assistant}{\href{https://fardatalab.org/}{Far Data Lab}, University of Toronto}{\small{Sept.\ 2024 -- Aug.\ 2025}}
+  \resumeItemListStart
+  \resumeItem{Investigated offloading computation onto data processing unit (DPUs) to enable efficient, scalable data processing}
+  % \resumeItem{Implemented the \textit{Monodepth2} depth estimation model in \textbf{C++} from scratch}
+  \resumeItem{Implemented and parallelized the execution of \textit{Monodepth2} in \textbf{C++}, achieving linear performance scaling with the number of threads when running on a DPU}
+  \resumeItem{Built a DPU-based prefetcher \textit{PD3} with a team of $6$ which intercepts network traffic to predict and prefetch data for tiered key-value stores, eliminating the network overhead introduced when fetching entries from remote}
+  \resumeItem{Designed an external service for offloading shuffle operations onto DPUs in distributed data analytics which supports both disagregated memory and storage backends}
+  \resumeItemListEnd
+  
+\resumeSubheadingTwo
+{Research Assistant}{University of Toronto}{\small{March 2024 -- Dec.\ 2024}}
+  \resumeItemListStart
+  \resumeItem{Worked on a team of $11$ to implement a pedagogical kernel \textit{KidneyOS} in \textbf{Rust} to be used in an introductory operating systems course with \textbf{500+} students annually}
+  \resumeItem{Enabled thread creation and destruction, multi-threading, pre-emptive scheduling within the thread system}
+  \resumeItem{Led a team of $3$ to implement POSIX-compatible syscalls and add support for running user-space executables}
+  \resumeItemListEnd
+
+\resumeSubheading
+{Research Assistant}{\href{https://hollandbloorview.ca/research-education/bloorview-research-institute/research-centres-labs/prism-lab}{PRISM Lab}, Bloorview Research Institute}{June 2024 -- Aug.\ 2024}
+{Supervisors:\ Erica Floreani \& Prof.\ Tom Chau; Funded by:\ FUSRP}{}
+  \resumeItemListStart
+  % \resumeItem{Worked under  on denoising electroencephalogram (EEG) data with deep-learning models}
+  \resumeItem{Curated deep-learning models from the literature on denoising electroencephalogram (EEG) data in a team of $4$ and benchmarked them on the \textit{EEGDenoiseNet} dataset}
+  \resumeItem{Investigated the applicability of end-to-end transformer models to denoise EEG signals and the impact of using signals' time-frequency representation as input on model performance}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
 
 %-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
