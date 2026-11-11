@@ -74,7 +74,7 @@
 \newcommand{\resumeSubheading}[5]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \small{\textbf{#1}; {#2}} & \small{#3} \\
+      \small{\textbf{#1}; {#2}} & \small{#3} \\[-0.05em]
       \textit{\small{#4}} & \textit{\small #5}
     \end{tabular*}\vspace{-7pt}
 }
@@ -89,7 +89,7 @@
 \newcommand{\resumeSubheadingThree}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{\small #1} & \small{#2} \\
+      \textbf{\small #1} & \small{#2} \\[-0.05em]
       {\small #3} & \textit{\small #4}
     \end{tabular*}\vspace{-7pt}
 }
@@ -97,7 +97,7 @@
 \newcommand{\resumeSubheadingFour}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{\small #1} & \small{#2} \\
+      \textbf{\small #1} & \small{#2} \\[-0.05em]
       \small{#3} \\
       \textit{\small #4}
     \end{tabular*}\vspace{-7pt}
@@ -106,8 +106,8 @@
 \newcommand{\resumeSubheadingFive}[5]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{\small #1} & \small{#2} \\
-      {\small #3} & \textit{\small #4} \\
+      \textbf{\small #1} & \small{#2} \\[-0.05em]
+      {\small #3} & \textit{\small #4} \\[-0.05em]
       \textit{\small #5}
     \end{tabular*}\vspace{-7pt}
 }
@@ -181,8 +181,12 @@
 \section{Publications}
 \resumeSubHeadingListStart
 
+\resumeSubheadingFour{EFL:\ Efficient, Fault-tolerant, and Low-cost Shuffle Service with Complete DPU Offloading}{}
+  {\textbf{Felix Zhang}, Joseph Zhu, and Qizhen Zhang}
+  {Under Review}
+
 \resumeSubheadingFour{PD3:\ Prefetching Data with DPUs for Disaggregated Memory \href{https://www.usenix.org/conference/nsdi26/presentation/sankhe}{\footnotesize\faIcon{external-link-alt}}}{May 2026}
-  {Sidharth Sankhe, \textbf{Felix Zhang}, Umayrah Chonee, Sherman Lim, Jason Hu, Jialin Li, Qizhen Zhang}
+  {Sidharth Sankhe, \textbf{Felix Zhang}, Umayrah Chonee, Sherman Lim, Jason Hu, Jialin Li, and Qizhen Zhang}
   {23\textsuperscript{\,rd} USENIX Symposium on Networked Systems Design and Implementation (NSDI '26)}
 
 \resumeItemListEnd
@@ -220,6 +224,15 @@
   \resumeItem{Curated deep-learning models from the literature on denoising electroencephalogram (EEG) data in a team of $4$ and benchmarked them on the \textit{EEGDenoiseNet} dataset}
   \resumeItem{Investigated the applicability of end-to-end transformer models to denoise EEG signals and the impact of using signals' time-frequency representation as input on model performance}
   \resumeItemListEnd
+
+% \resumeSubheading
+% {Machine Learning Researcher}{\href{https://bmolab.artsci.utoronto.ca/}{BMO Lab}, University of Toronto \href{https://github.com/ff-zhang/mocap-mujoco}{\footnotesize\faIcon{external-link-alt}}}{\small{July 2023 -- May 2024}}
+% {Supervisors:\ Prof.\ David Rokeby; Funded by:\ Work Study Program}{}
+%   \resumeItemListStart
+%   % \resumeItem{Worked under  to integrate motion-capture suits and diffusion models into live performances}
+%   \resumeItem{Applied forward dynamics in real-time on motion-capture data using \textbf{MuJoCo}, providing joint-level control of the model and the option to extract physical data using inverse dynamics}
+%   \resumeItem{Used imitation learning to enable humanoid models to copy movements from motion capture suits in real-time}
+%   \resumeItemListEnd
 
 \resumeSubheading
 {Research Assistant}{\href{https://www.physics.utoronto.ca/~zilmana/}{Biological Physics Group}, University of Toronto \href{https://github.com/ff-zhang/t-cell-response-encoder/tree/master}{\footnotesize\faIcon{external-link-alt}}}{May 2023 -- May 2024}
@@ -342,52 +355,52 @@
 
 %-----------COURSEWORK-----------
 
-\section{Selected Coursework}
-\vspace{-0.3em}
-\begin{minipage}{\textwidth}
-  \centering
-  \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
-  \renewcommand*{\thempfootnote}{\fnsymbol{mpfootnote}}
-  \renewcommand{\arraystretch}{1.2}
-  \begin{tabularx}{0.98\textwidth}{ p{6.0em} X r }
-    \textbf{Code} & \textbf{Title} & \textbf{Term} \\
-    \noalign{\vspace{0.1em}}
-    \hline\hline
-    \noalign{\vspace{0.2em}}
-    CSC2516\footnotemark[1] & Neural Networks and Deep Learning & Fall 2026 \\
+% \section{Selected Coursework}
+% \vspace{-0.3em}
+% \begin{minipage}{\textwidth}
+%   \centering
+%   \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+%   \renewcommand*{\thempfootnote}{\fnsymbol{mpfootnote}}
+%   \renewcommand{\arraystretch}{1.2}
+%   \begin{tabularx}{0.98\textwidth}{ p{6.0em} X r }
+%     \textbf{Code} & \textbf{Title} & \textbf{Term} \\
+%     \noalign{\vspace{0.1em}}
+%     \hline\hline
+%     \noalign{\vspace{0.2em}}
+%     CSC2516\footnotemark[1] & Neural Networks and Deep Learning & Fall 2026 \\
 
-    CSC2229\footnotemark[1] & Topics in Computer Networks: Computer Networks for Machine Learning & Winter 2026 \\
+%     CSC2229\footnotemark[1] & Topics in Computer Networks: Computer Networks for Machine Learning & Winter 2026 \\
 
-    CSC2234\footnotemark[2] & Database System Technology & Fall 2025 \\
-    CSC2235\footnotemark[1] & Cloud-native Data Management Systems & Fall 2025 \\
+%     CSC2234\footnotemark[2] & Database System Technology & Fall 2025 \\
+%     CSC2235\footnotemark[1] & Cloud-native Data Management Systems & Fall 2025 \\
 
-    CSC2221\footnotemark[1] & Introduction to the Theory of Distributed Computing & Fall 2024 \\
+%     CSC2221\footnotemark[1] & Introduction to the Theory of Distributed Computing & Fall 2024 \\
 
-    CSC324 & Principles of Programming Languages & Winter 2024 \\
-    CSC412\footnotemark[2] & Probabilistic Learning and Reasoning & Winter 2024 \\
-    CSC413\footnotemark[2] & Neural Networks and Deep Learning & Winter 2024 \\
-    CSC473 & Advanced Algorithm Design & Winter 2024 \\
-    MAT357 & Real Analysis \rom{1} & Winter 2024 \\
+%     CSC324 & Principles of Programming Languages & Winter 2024 \\
+%     CSC412\footnotemark[2] & Probabilistic Learning and Reasoning & Winter 2024 \\
+%     CSC413\footnotemark[2] & Neural Networks and Deep Learning & Winter 2024 \\
+%     CSC473 & Advanced Algorithm Design & Winter 2024 \\
+%     MAT357 & Real Analysis \rom{1} & Winter 2024 \\
 
-    APM462 & Nonlinear Optimization & Fall 2023 \\
-    CSC369 & Operating Systems & Fall 2023 \\
-    CSC420 & Introduction to Image Understanding & Fall 2023 \\
-    MAT354 & Complex Analysis \rom{1} & Fall 2023 \\
-    MAT377 & Mathematical Probability & Fall 2023 \\
+%     APM462 & Nonlinear Optimization & Fall 2023 \\
+%     CSC369 & Operating Systems & Fall 2023 \\
+%     CSC420 & Introduction to Image Understanding & Fall 2023 \\
+%     MAT354 & Complex Analysis \rom{1} & Fall 2023 \\
+%     MAT377 & Mathematical Probability & Fall 2023 \\
 
-    MAT327 & Introduction to Topology & Summer 2023 \\
+%     MAT327 & Introduction to Topology & Summer 2023 \\
 
-    CSC373 & Algorithm Design, Analysis and Complexity & Winter 2023 \\
-    CSC384 & Introduction to Artificial Intelligence & Winter 2023 \\
-    CSC438 & Computability and Logic & Winter 2023 \\
+%     CSC373 & Algorithm Design, Analysis and Complexity & Winter 2023 \\
+%     CSC384 & Introduction to Artificial Intelligence & Winter 2023 \\
+%     CSC438 & Computability and Logic & Winter 2023 \\
 
-    CSC463 & Computational Complexity and Computability & Fall 2022 \\
+%     CSC463 & Computational Complexity and Computability & Fall 2022 \\
 
-    MAT344 & Introduction to Combinatorics & Summer 2022
-  \end{tabularx}
-  \footnotetext[1]{Graduate course}
-  \footnotetext[2]{Cross-listed graduate course}
-\end{minipage}
+%     MAT344 & Introduction to Combinatorics & Summer 2022
+%   \end{tabularx}
+%   \footnotetext[1]{Graduate course}
+%   \footnotetext[2]{Cross-listed graduate course}
+% \end{minipage}
 
 %-------------------------------------------
 
